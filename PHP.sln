@@ -11,6 +11,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part3AccessingStringCharact
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part4Practice", "Part4Practice\Part4Practice.phpproj", "{A63D2173-F464-40A1-8645-695FB7C18420}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part5WorkingWithAssignmentAndDecrements", "Part5WorkingWithAssignmentAndDecrements\Part5WorkingWithAssignmentAndDecrements.phpproj", "{73C36A87-589D-436A-9F5E-84E1FD849D8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A63D2173-F464-40A1-8645-695FB7C18420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63D2173-F464-40A1-8645-695FB7C18420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63D2173-F464-40A1-8645-695FB7C18420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C36A87-589D-436A-9F5E-84E1FD849D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C36A87-589D-436A-9F5E-84E1FD849D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C36A87-589D-436A-9F5E-84E1FD849D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C36A87-589D-436A-9F5E-84E1FD849D8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
