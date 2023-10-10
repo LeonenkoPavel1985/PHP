@@ -19,6 +19,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part7AssociativeArrays", "P
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part8MultidimensionalArraysVariableTypes", "Part8MultidimensionalArraysVariableTypes\Part8MultidimensionalArraysVariableTypes.phpproj", "{494E4F1B-0032-4000-90D6-F821F3F1D7A7}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part9ConstructIfElse", "Part9ConstructIfElse\Part9ConstructIfElse.phpproj", "{9C7C33AE-A081-4005-80E3-77F229C749A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{494E4F1B-0032-4000-90D6-F821F3F1D7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{494E4F1B-0032-4000-90D6-F821F3F1D7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{494E4F1B-0032-4000-90D6-F821F3F1D7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7C33AE-A081-4005-80E3-77F229C749A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7C33AE-A081-4005-80E3-77F229C749A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7C33AE-A081-4005-80E3-77F229C749A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7C33AE-A081-4005-80E3-77F229C749A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
