@@ -9,6 +9,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part2WorkingWithStrings", "
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part3AccessingStringCharacters", "Part3AccessingStringCharacters\Part3AccessingStringCharacters.phpproj", "{B89B9C82-F18C-40B5-ABA9-00622E7836E6}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part4Practice", "Part4Practice\Part4Practice.phpproj", "{A63D2173-F464-40A1-8645-695FB7C18420}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B89B9C82-F18C-40B5-ABA9-00622E7836E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89B9C82-F18C-40B5-ABA9-00622E7836E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B89B9C82-F18C-40B5-ABA9-00622E7836E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63D2173-F464-40A1-8645-695FB7C18420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63D2173-F464-40A1-8645-695FB7C18420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63D2173-F464-40A1-8645-695FB7C18420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63D2173-F464-40A1-8645-695FB7C18420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
