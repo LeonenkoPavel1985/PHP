@@ -23,6 +23,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part9ConstructIfElse", "Par
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part10ConstructIfElseTasks", "Part10ConstructIfElseTasks\Part10ConstructIfElseTasks.phpproj", "{BADACD7F-ABEC-4AC2-8ED8-212110050D7D}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part11CyclesForeachWhileFor", "Part11CyclesForeachWhileFor\Part11CyclesForeachWhileFor.phpproj", "{E119880E-72F2-493E-B9EA-032BCE4475D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{BADACD7F-ABEC-4AC2-8ED8-212110050D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BADACD7F-ABEC-4AC2-8ED8-212110050D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BADACD7F-ABEC-4AC2-8ED8-212110050D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E119880E-72F2-493E-B9EA-032BCE4475D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E119880E-72F2-493E-B9EA-032BCE4475D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E119880E-72F2-493E-B9EA-032BCE4475D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E119880E-72F2-493E-B9EA-032BCE4475D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
