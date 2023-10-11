@@ -1,4 +1,6 @@
-﻿ОСНОВЫ ЯЗЫКА PHP.
+﻿# Part 2 Working With Strings.
+
+ОСНОВЫ ЯЗЫКА PHP.
 
 Работа со строками.
 

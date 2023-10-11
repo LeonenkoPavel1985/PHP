@@ -1,4 +1,6 @@
-﻿ОСНОВЫ ЯЗЫКА PHP.
+﻿# Part 3 Accessing String Characters.
+
+ОСНОВЫ ЯЗЫКА PHP.
 
 Обращение к символам строки.
 
