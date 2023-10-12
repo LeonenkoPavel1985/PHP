@@ -47,7 +47,7 @@ echo 'Количество элементов в массиве: ' . $count . '.
 // 1, 2, 3 <br>
 // 4, 5, 6 <br>
 // 7, 8, 9 <br>
-
+/*
 $arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 $count = 1;
 
@@ -59,6 +59,21 @@ foreach ($arr as $value) {
     else {
         echo "$value, ";
         $count++;
+    }
+}
+*/
+
+// 17. Составьте массив месяцев. С помощью цикла foreach выведите все месяцы, а текущий месяц выведите жирным (<b></b>). Текущий месяц должен храниться в переменной $month(DONE).
+
+$arr = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+$month = getdate(); // getdate() - возвращает информацию о дате/времени. Только английское именование месяцев.
+
+foreach ($arr as $arr) {
+    if ($arr == $month["month"]) {
+        echo "<b> $arr </b> <br>";
+    }
+    else {
+        echo "$arr <br>";
     }
 }
 
