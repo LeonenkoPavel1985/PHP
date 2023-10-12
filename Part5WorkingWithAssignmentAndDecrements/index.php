@@ -83,6 +83,6 @@ $var *= 7;
 $var -= 15;
 echo $var;
 
-// PHP Part5 Working With Assignment And Decrements (DONE).
+// Part5 Working With Assignment And Decrements (DONE).
 
 ?>

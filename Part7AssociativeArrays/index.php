@@ -34,6 +34,6 @@ echo ' ';
 // Второй способ.
 echo join(' ', $arr);
 
-// PHP Part 7 Associative Arrays (DONE).
+// Part 7 Associative Arrays (DONE).
 
 ?>

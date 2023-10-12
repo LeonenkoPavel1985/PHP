@@ -55,6 +55,6 @@ $d = 7;
 $result = $c + $d;
 echo "Результат: $result.";
 
-//PHP Part1 Working with variables (DONE).
+// Part1 Working with variables (DONE).
 
 ?>

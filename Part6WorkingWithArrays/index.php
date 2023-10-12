@@ -73,6 +73,6 @@ $arr = array('a', 'b', 'c', 'd', 'e');
 $var = array_reverse($arr);
 echo join(' ', $var);
 
-//PHP Part 6 Working With Arrays (DONE).
+// Part 6 Working With Arrays (DONE).
 
 ?>

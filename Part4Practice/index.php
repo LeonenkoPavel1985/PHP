@@ -39,6 +39,6 @@ $degreesFahrenheit = 120;
 $degreesCelsius = 5 * ($degreesFahrenheit - 32) / 9;
 echo '120 градусов Фарингейта равно: ' . $degreesCelsius . ' градусов Цельсия.';
 
-// PHP Part4 Practice (DONE).
+// Part4 Practice (DONE).
 
 ?>

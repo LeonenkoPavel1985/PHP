@@ -374,6 +374,6 @@ else
     echo 'Результат: ' . $a . ' ' . 'и' . ' ' . $b . '.';
 }
 
-// PHP Part 9 Construct If Else (DONE).
+// Part 9 Construct If Else (DONE).
 
 ?>

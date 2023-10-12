@@ -194,6 +194,6 @@ while (true) {
 echo 'Срок кредита составит: ' . $countMonth . ' месяцев.' . '</br>';
 echo 'Переплата составит: ' . round($fullSumm - $summ0, 2) . ' процентов.'; // round() - округление. Первый аргумент число и второй до скольки округлять.
 
-// PHP Part10 Construct If Else Tasks (DONE).
+// Part10 Construct If Else Tasks (DONE).
 
 ?>

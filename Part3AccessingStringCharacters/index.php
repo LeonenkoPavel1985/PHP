@@ -42,6 +42,6 @@ echo $game[8];
 echo $game[9];
 echo $game[2];
 
-// PHP Part3 Accessing String Characters(DONE).
+// Part3 Accessing String Characters(DONE).
 
 ?>
