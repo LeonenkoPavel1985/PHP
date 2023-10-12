@@ -1,4 +1,5 @@
 ﻿# Part 12 Cycles Foreach While For Tasks.
+ЦИКЛЫ FOREACH, WHILE, FOR.
 
 Задачи.
 
