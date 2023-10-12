@@ -80,17 +80,32 @@ foreach ($arr as $arr) {
 */
 
 // 18. Составьте массив дней недели. С помощью цикла foreach выведите все дни недели, выходные дни следует вывести жирным (<b></b>)(DONE).
-
+/*
 $arr = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
 foreach ($arr as $value) {
     if ($value == 'Суббота' or $value == 'Воскресенье') {
         echo "<b>$value</b> </br>";
     }
-    else {
+    else
+    {
         echo "$value </br>";
     }
+}
+*/
 
+// 19. Составьте массив дней недели. С помощью цикла foreach выведите все дни недели, а текущий день выведите курсивом (<i></i>). Текущий день должен храниться в переменной $day(DONE).
+
+$arr = array ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+$day = getdate(); // Только английское именование дней.
+
+foreach ($arr as $value) {
+    if ($value == $day["weekday"]) {
+        echo "<i>$value</i> <br>";
+    }
+    else {
+        echo "$value <br>";
+    }
 }
 
 ?>
