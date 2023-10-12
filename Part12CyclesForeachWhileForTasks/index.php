@@ -132,7 +132,7 @@ while ($i < 20) {
 // 333
 // 4444
 // 55555
-
+/*
 for ($i = 1; $i < 10; $i++) {
     $j = $i;
     while ($j > 0) {
@@ -141,7 +141,19 @@ for ($i = 1; $i < 10; $i++) {
     }
     echo "<br>";
 }
+*/
 
+// 22. Нарисуйте пирамиду, как показано на рисунке, воспользовавшись циклом for или while(DONE).
+// xx
+// xxxx
+// xxxxxx
+// xxxxxxxx
+// xxxxxxxxxx
 
+$elenment = 'xx';
+for ($i = 0; $i < 5; $i++) {
+    echo "$element <br>";
+    $element = $element . 'xx';
+}
 
 ?>
