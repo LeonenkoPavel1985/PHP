@@ -95,7 +95,7 @@ foreach ($arr as $value) {
 */
 
 // 19. Составьте массив дней недели. С помощью цикла foreach выведите все дни недели, а текущий день выведите курсивом (<i></i>). Текущий день должен храниться в переменной $day(DONE).
-
+/*
 $arr = array ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
 $day = getdate(); // Только английское именование дней.
 
@@ -106,6 +106,23 @@ foreach ($arr as $value) {
     else {
         echo "$value <br>";
     }
+}
+*/
+
+// 20. Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5(DONE).
+// x
+// xx
+// xxx
+// xxxx
+// xxxxx
+
+$i = 0;
+$element = 'x';
+
+while ($i < 20) {
+    echo "$element <br>";
+    $element = $element . 'x';
+    $i++;
 }
 
 ?>
