@@ -29,6 +29,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part12CyclesForeachWhileFor
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part13MathematicalFunctionsPHP", "Part13MathematicalFunctionsPHP\Part13MathematicalFunctionsPHP.phpproj", "{036116EF-EEBB-47ED-AD00-2D7861B17A5D}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part14MathematicalFunctionsPHPTasks", "Part14MathematicalFunctionsPHPTasks\Part14MathematicalFunctionsPHPTasks.phpproj", "{B0318F2B-127C-4F8B-92CE-FB32DED37FEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{036116EF-EEBB-47ED-AD00-2D7861B17A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{036116EF-EEBB-47ED-AD00-2D7861B17A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{036116EF-EEBB-47ED-AD00-2D7861B17A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0318F2B-127C-4F8B-92CE-FB32DED37FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0318F2B-127C-4F8B-92CE-FB32DED37FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0318F2B-127C-4F8B-92CE-FB32DED37FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0318F2B-127C-4F8B-92CE-FB32DED37FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
