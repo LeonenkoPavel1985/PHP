@@ -126,6 +126,6 @@ for ($i = 1; $i <= 10; $i++) {
 
 echo join(' ', $arr);
 
-// Part 13 Mathematical Functions PHP(DONE).
+// Part 13 Mathematical Functions PHP (DONE).
 
 ?>
