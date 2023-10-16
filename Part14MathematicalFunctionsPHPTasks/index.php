@@ -89,6 +89,7 @@ if ($a == 1) {
 
 //count — Подсчитывает количество элементов массива или Countable объекте.
 $arr = [12, 15, 20, 25, 59, 79];
+
 foreach ($arr as $elements) {
     $summ += $elements;
 }
