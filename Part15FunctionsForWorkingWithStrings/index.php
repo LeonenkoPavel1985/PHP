@@ -126,7 +126,7 @@ echo str_replace('.', '-', $str);
 */
 
 // 12. Дана строка $str. Замените смайлики ':)', ':(', '^-^', которые встречаются в этой строке на соответсвующие картинки (<img src=''>) (DONE).
-
+/*
 $str = 'Павел :), Антон :(, Андрей ^-^';
 
 $smiley_1 = ':)';
@@ -142,8 +142,22 @@ str_replace($smiley_2, '<img src="$imagePath_1">', $str);
 str_replace($smiley_3, '<img src="$imagePath_2">', $str);
 
 echo $str;
+*/
 
+// 13. Дана переменная $str, в которой хранится строка русского текста. Напишите скрипт, который запишет транслит этого текста в переменную $translit. Напишите
+// также скрипт, который выполнит обратную операцию (DONE).
 
+$str = 'Леоненко Павел';
+
+$arr_en = array('Леоненко' => 'Leonenko', 'Павел' => 'Pavel');
+$translit_en = str_replace(array_keys($arr_en), array_values($arr_en), $str);
+
+echo $translit_en . "<br>";
+
+$arr_ru = array('Leonenko' => 'Леоненко', 'Pavel' => 'Павел');
+$translit_ru = str_replace(array_keys($arr_ru), array_values($arr_ru), $translit_en);
+
+echo $translit_ru;
 
 //--------------------Конец-------------------------------
 
