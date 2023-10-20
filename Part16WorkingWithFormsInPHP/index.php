@@ -96,7 +96,7 @@ if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
     $login = trim($_REQUEST['login']);
     $password = trim($_REQUEST['password']);
 
-    if ($login == $loginFile and $password == $passwordFile) {
+    if ($login == $login and $password == $pass) {
         echo 'Доступ разрешен!';
     } else {
         echo 'Доступ запрещен!';
