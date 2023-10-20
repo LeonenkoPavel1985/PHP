@@ -90,8 +90,8 @@ if (!isset($_REQUEST['age'])) :
 
 <?php
 
-$loginFile = 'Pavel';
-$passwordFile = 'Pavel1985';
+$login = 'Pavel';
+$pass = 'Pavel1985';
 if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
     $login = trim($_REQUEST['login']);
     $password = trim($_REQUEST['password']);
