@@ -54,13 +54,29 @@ if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['te
 -->
 
 <!--3. Спросите возраст пользователя. Если форма была отправлена и введен возраст, товыведите его на экран, а форму уберите. Если же форма не была отправлена (это
-будет пр и первом заходе на страницу) — просто покажите ее.-->
+будет пр и первом заходе на страницу) — просто покажите ее (DONE).-->
 
+<form action="index.php" method="get">
+    <p>
+        Сколько вам лет: <input type="number" name="age" />
+    </p>
+    <input type="submit" value="Подтвердить" name="submit" />
 
-
+</form>
 
 <?php
-    
 
+if (isset($_REQUEST['age'])) {
+    $age = $_REQUEST['age'];
+    echo $age;
+} 
 
-?>
+if (!isset($_REQUEST['age'])) :
+    ?>
+    <form method="get">
+    <p>
+        Сколько вам лет: <input type="number" name="age" />
+    </p>
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+<?php endif; ?>
