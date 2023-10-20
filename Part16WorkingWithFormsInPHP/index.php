@@ -24,7 +24,7 @@ if (isset ($_REQUEST['name'])) {
     чтобы пользователь не мог вводить теги и таким образом сломать сайт (DONE). 
     Привет, ... , ... лет.
     Твое сообщение: ...-->
-
+<!--
 <form action="index.php" method="get">
     <p>
         Введите ваше имя: <input type="text" name="name" />
@@ -40,7 +40,7 @@ if (isset ($_REQUEST['name'])) {
 </form>
 
 <?php
-
+/*
 if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
     $name = $_REQUEST['name'];
     $age = $_REQUEST['age'];
@@ -49,5 +49,18 @@ if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['te
     echo 'Привет, ' . $name . ' ,' . $age . ' лет.' . '<br>';
     echo 'Твое сообщение: ' . $text;
 }
+*/
+?>
+-->
+
+<!--3. Спросите возраст пользователя. Если форма была отправлена и введен возраст, товыведите его на экран, а форму уберите. Если же форма не была отправлена (это
+будет пр и первом заходе на страницу) — просто покажите ее.-->
+
+
+
+
+<?php
+    
+
 
 ?>
