@@ -21,18 +21,33 @@ if (isset ($_REQUEST['name'])) {
 -->
 
 <!--2. Спросите у пользователя имя, возраст, а также попросите его ввести сообщение (textarea). Выведите эти данные на экран в формате, приведенном под данной . Позаботьтесь о том, 
-    чтобы пользователь не мог вводить теги и таким образом сломать сайт. 
+    чтобы пользователь не мог вводить теги и таким образом сломать сайт (DONE). 
     Привет, ... , ... лет.
     Твое сообщение: ...-->
 
 <form action="index.php" method="get">
-    <p>Введите ваше имя: <input type="text" name="name" /></p>
+    <p>
+        Введите ваше имя: <input type="text" name="name" />
+    </p>
+    <p>
+        Введите ваш возраст: <input type="number" name="age" />
+    </p>
+    <textarea name="text" id="" cols="42" rows="10" placeholder="Введите сообщение"></textarea> 
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+
 </form>
 
-
-
-
 <?php
-    
+
+if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
+    $name = $_REQUEST['name'];
+    $age = $_REQUEST['age'];
+    $text = $_REQUEST['text'];
+
+    echo 'Привет, ' . $name . ' ,' . $age . ' лет.' . '<br>';
+    echo 'Твое сообщение: ' . $text;
+}
 
 ?>
