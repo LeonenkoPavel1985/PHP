@@ -4,27 +4,27 @@
 <!--В методе POST данные отправляются на сервер в виде пакета в отдельном сообщении со скриптом обработки. Данные, отправленные с помощью метода POST, не будут отображаться в URL-адресе.-->
 
 <!--1. Спросите имя пользователя с помощью формы. Результат запишите в переменую $name. Выведите на экран фразу 'Привет, %Имя%' (DONE).-->
-<!--
+
 <form action="index.php" method="post">
     <input type="text" name="name" placeholder="Введите ваше имя" />
     <input type="submit" value="Подтвердить" name="submit" />
 </form>
 
 <?php
-/*
-if (isset ($_REQUEST['name'])) {
+
+if (isset($_REQUEST['name'])) {
     $name = $_REQUEST['name'];
     echo 'Привет, ' . $name . ' !!!';
 }
-*/
+
 ?>
--->
+
 
 <!--2. Спросите у пользователя имя, возраст, а также попросите его ввести сообщение (textarea). Выведите эти данные на экран в формате, приведенном под данной . Позаботьтесь о том, 
     чтобы пользователь не мог вводить теги и таким образом сломать сайт (DONE). 
     Привет, ... , ... лет.
     Твое сообщение: ...-->
-<!--
+
 <form action="index.php" method="get">
     <p>
         Введите ваше имя: <input type="text" name="name" />
@@ -40,7 +40,7 @@ if (isset ($_REQUEST['name'])) {
 </form>
 
 <?php
-/*
+
 if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['text'])) {
     $name = $_REQUEST['name'];
     $age = $_REQUEST['age'];
@@ -49,9 +49,9 @@ if (isset($_REQUEST['name']) and isset($_REQUEST['age']) and isset($_REQUEST['te
     echo 'Привет, ' . $name . ' ,' . $age . ' лет.' . '<br>';
     echo 'Твое сообщение: ' . $text;
 }
-*/
+
 ?>
--->
+
 
 <!--3. Спросите возраст пользователя. Если форма была отправлена и введен возраст, товыведите его на экран, а форму уберите. Если же форма не была отправлена (это
 будет пр и первом заходе на страницу) — просто покажите ее (DONE).-->
@@ -80,3 +80,29 @@ if (!isset($_REQUEST['age'])) :
     <input type="submit" value="Подтвердить" name="submit" />
 </form>
 <?php endif; ?>
+
+<!--4. Спросите у пользователя логин и пароль (в браузере должен быть звездочками). Сравните их с логином $login и паролем $pass, хранящихся в файле. 
+Если все верно — выведите 'Доступ разрешен!', в противном случае — 'Доступ запрещен!'. Сделайте так, чтобы скрипт обрезал концевые пробелы в строках, которые ввел пользователь (DONE).-->
+
+<form action="index.php" method="post">
+    <input type="text" name="login" placeholder="Введите логин" />
+    <input type="password" name="password" placeholder="Введите пароль" />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+
+$loginFile = 'Pavel';
+$passwordFile = 'Pavel1985';
+if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
+    $login = trim($_REQUEST['login']);
+    $password = trim($_REQUEST['password']);
+
+    if ($login == $loginFile and $password == $passwordFile) {
+        echo 'Доступ разрешен!';
+    } else {
+        echo 'Доступ запрещен!';
+    }
+}
+
+?>
