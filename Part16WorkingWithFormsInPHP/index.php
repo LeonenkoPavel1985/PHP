@@ -104,3 +104,12 @@ if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
 }
 
 ?>
+
+
+<!--GET-запросы и функция include.-->
+
+<!--5. Отправьте GET-запрос с помощью ссылки следующего вида (см. пример). Запишите номер страницы в переменную $page ('domain.ru/index.php?page=3').-->
+
+<form action="index.php" method="dialog">
+
+</form>
