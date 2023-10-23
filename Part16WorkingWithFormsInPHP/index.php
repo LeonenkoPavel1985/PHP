@@ -108,8 +108,25 @@ if (isset($_REQUEST['login']) and isset($_REQUEST['password'])) {
 
 <!--GET-запросы и функция include.-->
 
-<!--5. Отправьте GET-запрос с помощью ссылки следующего вида (см. пример). Запишите номер страницы в переменную $page ('domain.ru/index.php?page=3').-->
+<!---->
+<!--Выражение include включает и выполняет указанный файл.-->
 
-<form action="index.php" method="dialog">
+<!--5. Отправьте GET-запрос с помощью ссылки следующего вида (см. пример). Запишите номер страницы в переменную $page ('domain.ru/index.php?page=3')(DONE).-->
 
+<form action="index.php" method="get">
+    Ввдите номер страницы: <input type="text" name="page" />
+    <br />
+    <input type="submit" value="Отправить" name="submit" />
 </form>
+
+<?php
+
+$page = 'не определена';
+
+if (isset ($_GET["page"])) {
+    $page = $_GET["page"];
+}
+
+echo 'Номер страницы: ' . $page . '.';
+
+?>
