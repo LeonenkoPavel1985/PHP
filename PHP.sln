@@ -35,6 +35,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part15FunctionsForWorkingWi
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part16WorkingWithFormsInPHP", "Part16WorkingWithFormsInPHP\Part16WorkingWithFormsInPHP.phpproj", "{FD368E83-F5CD-44C6-9EF2-599F701D0AB3}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part17WorkingWithDatesInPHP", "Part17WorkingWithDatesInPHP\Part17WorkingWithDatesInPHP.phpproj", "{516DC8A9-EC73-4242-8A0C-3BF7A62E8984}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{FD368E83-F5CD-44C6-9EF2-599F701D0AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD368E83-F5CD-44C6-9EF2-599F701D0AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD368E83-F5CD-44C6-9EF2-599F701D0AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516DC8A9-EC73-4242-8A0C-3BF7A62E8984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516DC8A9-EC73-4242-8A0C-3BF7A62E8984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516DC8A9-EC73-4242-8A0C-3BF7A62E8984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516DC8A9-EC73-4242-8A0C-3BF7A62E8984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
