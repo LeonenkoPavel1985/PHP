@@ -156,4 +156,22 @@ if (isset($_REQUEST['name'])) {
 
 ?>
 
-<!--7. Спросите у пользователя имя, а также попросите его ввести сообщение (textarea).Сделайте так, чтобы после отправки формы значения ее полей не пропадали.-->
+<!--7. Спросите у пользователя имя, а также попросите его ввести сообщение (textarea).Сделайте так, чтобы после отправки формы значения ее полей не пропадали (DONE).-->
+
+<form action="index.php" method="post">
+    <input type="text" name="name" placeholder="Введите имя" value="<?= $name; ?>" />
+    <br />
+    <textarea name="message" id="" cols="42" rows="10" placeholder="Введите сообщение"><?= $message; ?></textarea>
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+$message = '';
+$name = '';
+if (isset($_REQUEST['name']) and isset($_REQUEST['message'])) {
+    $name = $_REQUEST['name'];
+    $message = $_REQUEST['message'];
+    echo 'Привет, ' . $name . '<br>' . $message;
+}
+?>
+
