@@ -80,5 +80,16 @@ $today = date('Y.m.d , H:i:s');
 
 echo 'Сейчас: ' . $today . '.' . '<br>';
 
+// 7. Выведите текущую дату-время в форматах '2013-12-31', '31.12.2013', '31.12.13', '12:59:59' (DONE).
+
+$todayOne = date('Y-m-d');
+$todayTwo = date('d.m.Y');
+$todayThree = date('d.m.y');
+$todayFour = date('H:i:s');
+
+echo $todayOne . '<br>';
+echo $todayTwo . '<br>';
+echo $todayThree . '<br>';
+echo $todayFour;
 
 ?>
