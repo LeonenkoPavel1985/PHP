@@ -176,3 +176,23 @@ if (isset($_REQUEST['date'])) {
 }
 
 ?>
+
+<!--15. Сделайте форму, которая спрашивает дату в формате '2013-12-31'. С помощью функций explode и mktime переведите эту дату в формат timestamp. Узнайте месяц (словом) за введенную дату (DONE).-->
+
+<form action="index.php" method="post">
+    Введите дату в формате 'ГГГГ-ММ-ДД': <input type="text" name="date" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+
+if (isset($_REQUEST['date'])) {
+    $date = explode('-', trim(strip_tags($_REQUEST['date'])));
+    $newDate = mktime(0, 0, 0, $date[1], $date[2], $date[0]);
+    $wordsDate = [1=> 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']; // Начало с 1.
+    echo 'Месяц указанной вами даты: ' . $wordsDate[date('n', $newDate)] . '.';
+}
+
+?>
