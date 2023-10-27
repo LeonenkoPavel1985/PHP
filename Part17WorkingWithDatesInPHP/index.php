@@ -155,3 +155,24 @@ if (isset($_REQUEST['year'])) {
     }
 }
 ?>
+
+<!--14. Сделайте форму, которая спрашивает дату в формате '31.12.2013'. С помощью функций explode и mktime переведите эту дату в формат timestamp. Узнайте день недели (словом) за введенную дату (DONE).-->
+
+<form action="index.php" method="post">
+    Введите дату в формате 'ДД.ММ.ГГГГ': <input type="text" name="date" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+
+if (isset($_REQUEST['date'])) {
+    $date = trim(strip_tags($_REQUEST['date']));
+    $arrDate = explode('.', $date); // Дату преобразуем в массив с разделителем точкой (explode — Разбивает строку с помощью разделителя).
+    $newDate = mktime(0, 0, 0, $arrDate[1], $arrDate[0], $arrDate[2]);
+    $wordsDate = ['Воскресенье', 'Понедельник', 'Втоник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    echo 'Указанная дата: ' . $wordsDate[date('w', $newDate)] . '.';
+}
+
+?>
