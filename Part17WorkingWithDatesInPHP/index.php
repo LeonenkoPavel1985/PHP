@@ -140,7 +140,7 @@ echo 'Количество дней в текущем месяце: ' . $amountD
 </form>
 
 <?php
-
+/*
 if (isset($_REQUEST['year'])) {
     $year = trim(strip_tags($_REQUEST['year'])); // trim — Удаляет пробелы (или другие символы) из начала и конца строки. Strip_tags — Удаляет теги HTML и PHP из строки.
 
@@ -154,7 +154,7 @@ if (isset($_REQUEST['year'])) {
         echo 'Ошибка ввода (число должно быть четырехзначным) !!!';
     }
 }
-
+*/
 ?>
 
 <!--14. Сделайте форму, которая спрашивает дату в формате '31.12.2013'. С помощью функций explode и mktime переведите эту дату в формат timestamp. Узнайте день недели (словом) за введенную дату (DONE).-->
@@ -167,7 +167,7 @@ if (isset($_REQUEST['year'])) {
 </form>
 
 <?php
-
+/*
 if (isset($_REQUEST['date'])) {
     $date = trim(strip_tags($_REQUEST['date']));
     $arrDate = explode('.', $date); // Дату преобразуем в массив с разделителем точкой (explode — Разбивает строку с помощью разделителя).
@@ -175,7 +175,7 @@ if (isset($_REQUEST['date'])) {
     $wordsDate = ['Воскресенье', 'Понедельник', 'Втоник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
     echo 'Указанная дата: ' . $wordsDate[date('w', $newDate)] . '.';
 }
-
+*/
 ?>
 
 <!--15. Сделайте форму, которая спрашивает дату в формате '2013-12-31'. С помощью функций explode и mktime переведите эту дату в формат timestamp. Узнайте месяц (словом) за введенную дату (DONE).-->
@@ -188,14 +188,14 @@ if (isset($_REQUEST['date'])) {
 </form>
 
 <?php
-
+/*
 if (isset($_REQUEST['date'])) {
     $date = explode('-', trim(strip_tags($_REQUEST['date'])));
     $newDate = mktime(0, 0, 0, $date[1], $date[2], $date[0]);
     $wordsDate = [1=> 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']; // Начало с 1.
     echo 'Месяц указанной вами даты: ' . $wordsDate[date('n', $newDate)] . '.';
 }
-
+*/
 ?>
 
 <!--16. Сделайте форму, которая спрашивает дату-время в формате '2025-12-31T12:13:59'. С помощью функции strtotime и функции date преобразуйте ее в формат '12:13:59 31.12.2025' (DONE).-->
@@ -208,12 +208,12 @@ if (isset($_REQUEST['date'])) {
 </form>
 
 <?php
-
+/*
     if (isset($_REQUEST['date'])) {
-       $formatDate = date('H:i:s d.m.Y', strtotime($_POST['date'])); // strtotime — анализирует любое текстовое описание даты и времени на английском языке в временную метку Unix.
+       $formatDate = date('H:i:s d.m.Y', strtotime($_REQUEST['date'])); // strtotime — анализирует любое текстовое описание даты и времени на английском языке в временную метку Unix.
        echo $formatDate;
     }
-    
+    */
 ?>
 
 <!--Сравнение дат-->
@@ -231,7 +231,7 @@ if (isset($_REQUEST['date'])) {
 </form>
 
 <?php
-
+/*
 if (isset($_REQUEST['date1']) and isset($_REQUEST['date2'])) {
     $date1 = explode('-', strip_tags(trim($_REQUEST['date1'])));
     $date2 = explode('-', strip_tags(trim($_REQUEST['date2'])));
@@ -244,7 +244,7 @@ if (isset($_REQUEST['date1']) and isset($_REQUEST['date2'])) {
         echo 'Вторая дата: ' . date('Y-m-d', $dateNew2) . ' больше первой: ' . date('Y-m-d', $dateNew1) . '.';
     }
 }
-
+*/
 ?>
 
 <!--На strtotime.-->
@@ -254,9 +254,26 @@ if (isset($_REQUEST['date1']) and isset($_REQUEST['date2'])) {
 // strtotime — анализирует любое текстовое описание даты и времени на английском языке в временную метку Unix.
 
 // 18. Дана дата в формате '2013-12-31'. С помощью функции strtotime преобразуйте ее в формат '31-12-2013' (DONE).
-
+/*
 $date = '2013-12-31';
 
 echo date('d-m-Y', strtotime($date));
+*/
+?>
+
+<!--19. Сделайте форму, которая спрашивает дату-время в формате '2013-12-31T12:13:59'. С помощью функции strtotime преобразуйте ее в формат '12:13:59 31.12.2013' (DONE).-->
+
+<form action="index.php" method="post">
+    Введите дату в формате 'ГГГГ-ММ-ДД ЧЧ:ММ:СС': <input type="text" name="date" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+
+if (isset($_REQUEST['date'])) {
+    echo 'Дата в формаие ЧЧ:ММ:СС ГГГГ-ММ-ДД: ' . date('H:i:s d.m.Y', strtotime($_REQUEST['date'])) . '.';
+}
 
 ?>
