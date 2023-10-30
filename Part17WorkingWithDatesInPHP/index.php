@@ -310,4 +310,4 @@ echo 'К дате 2015-02-05 отнимаем 3 дня: ' . date_format(date_mod
 
 ?>
 
-<!--Part 17 Working With Dates In PHP-->
+<!--Part 17 Working With Dates In PHP (DONE).-->
