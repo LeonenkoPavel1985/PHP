@@ -196,3 +196,19 @@ if (isset($_REQUEST['date'])) {
 }
 
 ?>
+
+<!--16. Сделайте форму, которая спрашивает дату-время в формате '2025-12-31T12:13:59'. С помощью функции strtotime и функции date преобразуйте ее в формат '12:13:59 31.12.2025' (DONE).-->
+
+<form action="index.php" method="post">
+    Веедите дату в формате 'ГГГГ-ММ-ДД ЧЧ:ММ:СС': <input type="text" name="date" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+    if (isset($_REQUEST['date'])) {
+       $formatDate = date('H:i:s d.m.Y', strtotime($_POST['date'])); // strtotime — анализирует любое текстовое описание даты и времени на английском языке в временную метку Unix.
+       echo $formatDate;
+    }
+?>
