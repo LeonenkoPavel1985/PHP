@@ -154,6 +154,7 @@ if (isset($_REQUEST['year'])) {
         echo 'Ошибка ввода (число должно быть четырехзначным) !!!';
     }
 }
+
 ?>
 
 <!--14. Сделайте форму, которая спрашивает дату в формате '31.12.2013'. С помощью функций explode и mktime переведите эту дату в формат timestamp. Узнайте день недели (словом) за введенную дату (DONE).-->
@@ -207,8 +208,41 @@ if (isset($_REQUEST['date'])) {
 </form>
 
 <?php
+
     if (isset($_REQUEST['date'])) {
        $formatDate = date('H:i:s d.m.Y', strtotime($_POST['date'])); // strtotime — анализирует любое текстовое описание даты и времени на английском языке в временную метку Unix.
        echo $formatDate;
     }
+    
+?>
+
+<!--Сравнение дат-->
+
+<!--17. Сделайте форму, которая спрашивает две даты в формате '2013-12-31'. Первую дату запишите в переменную $date1, а вторую в $date2. Сравните, какая из введенных дат больше. Выведите ее на экран (DONE).-->
+
+<form action="index.php" method="post">
+    Введите первую дату в формаие 'ГГГГ-ММ-ДД': <input type="text" name="date1" />
+    <br />
+    <br />
+    Введите вторую дату в формате 'ГГГГ-ММ-ДД': <input type="text" name="date2" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" name="submit" />
+</form>
+
+<?php
+
+if (isset($_REQUEST['date1']) and isset($_REQUEST['date2'])) {
+    $date1 = explode('-', strip_tags(trim($_REQUEST['date1'])));
+    $date2 = explode('-', strip_tags(trim($_REQUEST['date2'])));
+    $dateNew1 = mktime(0, 0, 0, $date1[1], $date1[2], $date1[0]);
+    $dateNew2 = mktime(0, 0, 0, $date2[1], $date2[2], $date2[0]);
+
+    if ($dateNew1 > $dateNew2) {
+        echo 'Первая дата: ' . date('Y-m-d', $dateNew1) . ' больше второй: ' . date('Y-m-d', $dateNew2) . '.';
+    } else if ($dateNew1 < $dateNew2) {
+        echo 'Вторая дата: ' . date('Y-m-d', $dateNew2) . ' больше первой: ' . date('Y-m-d', $dateNew1) . '.';
+    }
+}
+
 ?>
