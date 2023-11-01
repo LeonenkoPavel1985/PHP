@@ -65,14 +65,14 @@ echo 'В ' . $year . ' году: ' . $count . ' воскресенья(-ий).';
 ?>
 
 <!--26. Сделайте форму с одним полем ввода, в которое пользователь вводит год. Найдитевсе пятницы 13-е в этом году. Результат выведите в виде списка дат (DONE).-->
-
+<!--*************
 <form action="index.php" method="get">
     Введите год в формате ГГГГ: <input type="text" name="year" />
     <input type="submit" value="Потвердить" />
 </form>
 
 <?php
-
+/*
 if (isset($_GET['year'])) {
     $year = $_GET['year'];
     $friday = [];
@@ -84,5 +84,52 @@ if (isset($_GET['year'])) {
     }
     var_dump($friday);
 }
-
+*/
 ?>
+*************-->
+
+<!--27. Дана дата в формате '2013-12-31'. Определите знак зодиака, к которому относится данная дата (DONE).-->
+<!--****************
+<form action="index.php" method="post">
+    Введите дату в формате ГГГГ-ММ-ДД: <input type="text" name="date" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" />
+</form>
+    -->
+<?php
+/*
+if (isset($_REQUEST['date'])) {
+    $date = explode('-', $_REQUEST['date']);
+    $dateStr = $date[1] . $date[2]; // Склеиваем массив в строку. Год выпускаем, так как он не играет роли для определения знака задиака.
+
+    if ($dateStr >= '0321' and $dateStr <= '0419') {
+        echo 'Вы овен.';
+    } else if ($dateStr >= '0420' and $dateStr <= '0520') {
+        echo 'Вы телец.';
+    } else if ($dateStr >= '0521' and $dateStr <= '0620') {
+        echo 'Вы близнецы.';
+    } else if ($dateStr >= '0621' and $dateStr <= '0722') {
+        echo 'Вы рак.';
+    } else if ($dateStr >= '0723' and $dateStr <= '0822') {
+        echo 'Вы лев.';
+    } else if ($dateStr >= '0823' and $dateStr <= '0922') {
+        echo 'Вы дева.';
+    } else if ($dateStr >= '0923' and $dateStr <= '1022') {
+        echo 'Вы весы.';
+    } else if ($dateStr >= '1023' and $dateStr <= '1121') {
+        echo 'Вы скорпион.';
+    } else if ($dateStr >= '1122' and $dateStr <= '1221') {
+        echo 'Вы стрелец.';
+    } else if (($dateStr >= '1222' and $dateStr <= '1231') or ($dateStr >= '0101' and $dateStr <= '0119')) {
+        echo 'Вы козерог.';
+    } else if ($dateStr >= '0120' and $dateStr <= '0218') {
+        echo 'Вы водолей.';
+    } else if ($dateStr >= '0219' and $dateStr <= '0320') {
+        echo 'Вы рыба.';
+    }
+}
+*/
+?>
+
+<!--28. Дан GET-параметр date, в который вводится год в формате '2013'. Узнайте, какой это будет год по восточному календарю.-->
