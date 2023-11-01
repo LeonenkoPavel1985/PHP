@@ -42,7 +42,6 @@ $startTimeDate = mktime(0, 0, 0, 12, 31, 2023);
 
 $newYear = abs(($dateTimeNow - $startTimeDate) / 60 / 60 / 24);
 echo 'До Нового Года осталось: ' . round($newYear) . ' дня(-ей).';
-*/
 
 // 25. Найдите сколько воскресений будет в определенном году $year (DONE).
 
@@ -62,6 +61,28 @@ for ($day = 1; $day <= 365; $day++) {
 }
 
 echo 'В ' . $year . ' году: ' . $count . ' воскресенья(-ий).';
-
+*/
 ?>
 
+<!--26. Сделайте форму с одним полем ввода, в которое пользователь вводит год. Найдитевсе пятницы 13-е в этом году. Результат выведите в виде списка дат (DONE).-->
+
+<form action="index.php" method="get">
+    Введите год в формате ГГГГ: <input type="text" name="year" />
+    <input type="submit" value="Потвердить" />
+</form>
+
+<?php
+
+if (isset($_GET['year'])) {
+    $year = $_GET['year'];
+    $friday = [];
+    for ($i = 1; $i <= 12; $i++) {
+        $timestamp = mktime(0, 0, 0, $i, 13, $year);
+        if (date('w', $timestamp) == 5) {
+            $friday[] = date('d.m.Y', $timestamp);
+        }
+    }
+    var_dump($friday);
+}
+
+?>
