@@ -96,7 +96,7 @@ if (isset($_GET['year'])) {
     <br />
     <input type="submit" value="Подтвердить" />
 </form>
-    -->
+*****************-->
 <?php
 /*
 if (isset($_REQUEST['date'])) {
@@ -132,4 +132,49 @@ if (isset($_REQUEST['date'])) {
 */
 ?>
 
-<!--28. Дан GET-параметр date, в который вводится год в формате '2013'. Узнайте, какой это будет год по восточному календарю.-->
+<!--28. Дан GET-параметр date, в который вводится год в формате '2013'. Узнайте, какой это будет год по восточному календарю (DONE).-->
+
+<form action="index.php" method="get">
+    Введите год в формате ГГГГ: <input type="text" name="year" />
+    <br />
+    <br />
+    <input type="submit" value="Подтвердить" />
+</form>
+
+<?php
+
+if (isset($_GET['year'])) {
+    $year = $_GET['year'];
+
+    if (strlen($year) == 4) {
+        if ($year == 1960 or $year == 1972 or $year == 1984 or $year == 1996 or $year == 2008 or $year == 2020) {
+            echo 'Вы крыса.';
+        } else if ($year == 1961 or $year == 1973 or $year == 1985 or $year == 1997 or $year == 2009 or $year == 2021) {
+            echo 'Вы бык.';
+        } else if ($year == 1962 or $year == 1974 or $year == 1986 or $year == 1998 or $year == 2010 or $year == 2022) {
+            echo 'Вы тигр.';
+        } else if ($year == 1963 or $year == 1975 or $year == 1987 or $year == 1999 or $year == 2011 or $year == 2023) {
+            echo 'Вы кролик.';
+        } else if ($year == 1964 or $year == 1976 or $year == 1988 or $year == 2000 or $year == 2012 or $year == 2024) {
+            echo 'Вы дракон.';
+        } else if ($year == 1965 or $year == 1977 or $year == 1989 or $year == 2001 or $year == 2013 or $year == 2025) {
+            echo 'Вы змея.';
+        } else if ($year == 1966 or $year == 1978 or $year == 1990 or $year == 2002 or $year == 2014 or $year == 2026) {
+            echo 'Вы лошадь.';
+        } else if ($year == 1967 or $year == 1979 or $year == 1991 or $year == 2003 or $year == 2015 or $year == 2027) {
+            echo 'Вы овца.';
+        } else if ($year == 1968 or $year == 1980 or $year == 1992 or $year == 2004 or $year == 2016 or $year == 2028) {
+            echo 'Вы обезьяна.';
+        } else if ($year == 1969 or $year == 1981 or $year == 1993 or $year == 2005 or $year == 2017 or $year == 2029) {
+            echo 'Вы петух.';
+        } else if ($year == 1970 or $year == 1982 or $year == 1994 or $year == 2006 or $year == 2018 or $year == 2030) {
+            echo 'Вы собака.';
+        } else if ($year == 1971 or $year == 1983 or $year == 1995 or $year == 2007 or $year == 2019 or $year == 2031) {
+            echo 'Вы свинья.';
+        }
+    } else {
+        echo 'Вы не верно указали год !!!';
+    }
+}
+
+?>
