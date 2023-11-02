@@ -190,7 +190,6 @@ date_modify($date, '- 100 day');
 $day = date_format($date, 'w');
 
 echo 'Был день: ' . $daysWeek[$day] . '.';
-*/
 
 // 30. Сделайте массив праздников. Если пользователь заходит на сайт в праздник — поздравьте его с этим праздником (DONE).
 
@@ -203,6 +202,23 @@ $date = date('dm', time());
 if (array_key_exists($date, $arrHolidays)) { // array_key_exists — Проверяет, присутствует ли в массиве указанный ключ или индекс.
     echo 'С праздником: ' . $arrHolidays[$date] . ' !!!';
 }
+*/
 
+?>
+
+<!--31. Рассчитайте дату пасхи в заданном году. Алгоритм ее расчета найдите в поисковых системах (DONE).-->
+
+<form action="index.php" method="get">
+Введите год в формате ГГГГ: <input type="text" name="year" />
+<input type="submit" value="Подтвердить" />
+</form>
+
+<?php
+
+if (isset($_GET['year'])) {
+    $year = $_GET['year'];
+    $dateEaster = date('d M Y', easter_date($year)); // easter_date — Получить метку времени Unix, соответствующую полуночи на Пасху в заданном году.
+    echo 'В ' . $year . ' будет: ' . $dateEaster . '.';
+}
 
 ?>
