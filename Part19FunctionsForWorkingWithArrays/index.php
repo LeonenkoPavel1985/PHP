@@ -104,9 +104,23 @@ var_dump($b);
 
 // На array_keys, array_values, array_combine.
 
+// array_keys — Возвращает все или некоторое подмножество ключей массива.
+// array_values — Выбирает все значения массива.
+// array_combine — Создаёт новый массив, используя один массив в качестве ключей, а другой для его значений.
 
 
-// 8. Дан массив 'green'=>'зеленый', 'blue'=>'голубой', 'red'=>'красный'. Запишите в массив $key английские названия цветов, а в $values – русские.
+// 8. Дан массив 'green'=>'зеленый', 'blue'=>'голубой', 'red'=>'красный'. Запишите в массив $key английские названия цветов, а в $values – русские (DONE).
 
+$arr = array('green' => 'зеленый', 'blue' => 'голубой', 'red' => 'красный');
+
+$key = array_keys($arr);
+echo join(' ', $key) . '<br>';
+print_r($key);
+
+echo '<br>';
+
+$values = array_values($arr);
+echo join(' ', $values) . '<br>';
+print_r($values);
 
 ?>
