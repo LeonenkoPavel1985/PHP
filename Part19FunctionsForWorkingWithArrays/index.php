@@ -164,7 +164,7 @@ print_r($arr_result);
 */
 
 // 12. Дан массив с элементами 'a', 'b', 'c', 'b', 'a'. Удалите из него повторяющиеся элементы (DONE).
-
+/*
 $arr = array('a', 'b', 'c', 'b', 'a');
 echo join(' ', $arr) . '<br>';
 print_r($arr);
@@ -174,6 +174,17 @@ echo '<br>';
 $arr_result = array_unique($arr);
 echo join(' ', $arr_result) . '<br>';
 print_r($arr_result);
+*/
 
+// 13. Дан массив с элементами 'a', 'b', 'c', 'b', 'a'. Подсчитайте сколько раз встречается каждая из букв (DONE).
+
+$arr = ['a', 'b', 'c', 'b', 'a'];
+echo join(' ', $arr) . '<br>';
+print_r($arr);
+
+echo '<br>';
+
+$arr_result = array_count_values($arr);
+print_r($arr_result);
 
 ?>
