@@ -252,12 +252,22 @@ var_dump($result);
 */
 
 // 18. Дан массив с элементами '<b>php</b>', '<i>html</i>'. Создайте новый массив, в котором из элементов будут удалены теги (DONE).
-
+/*
 $arr = ['<b>php</b>', '<i>html</i>'];
 echo join(' ', $arr) . '<br>';
 
 $res = array_map('strip_tags', $arr);
 echo join(' ', $res) . '<br>';
 var_dump($res);
+*/
+
+// 19. Дан массив с элементами ' a ', ' b ', ' с '. Создайте новый массив, в котором будут данные элементы без концевых пробелов (DONE).
+
+$arr = [' a ', ' b ', ' c '];
+echo join(' ', $arr) . '<br>';
+
+$result = array_map('trim', $arr);
+echo join($result) . '<br>';
+var_dump($result);
 
 ?>
