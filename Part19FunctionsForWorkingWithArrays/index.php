@@ -141,12 +141,25 @@ print_r($arr);
 // array_unique — Убирает повторяющиеся значения из массива.
 
 // 10. Дан массив 'green'=>'зеленый', 'blue'=>'голубой', 'red'=>'красный'. Поменяйте местами ключи и значения (DONE).
-
+/*
 $arr = array('green' => 'зеленый', 'blue' => 'голубой', 'red' => 'красный');
 print_r($arr);
 echo '<br>';
 
 $arr_result = array_flip($arr);
+print_r($arr_result);
+*/
+
+// 11. Дан массив с элементами '1', '2', '3', '4', '5'. Создайте массив с элементами '5', '4', '3', '2', '1' (DONE).
+
+$arr = ['1', '2', '3', '4', '5'];
+echo join(' ', $arr) . '<br>';
+print_r($arr);
+
+echo '<br>';
+
+$arr_result = array_reverse($arr);
+echo join(' ', $arr_result) . '<br>';
 print_r($arr_result);
 
 ?>
