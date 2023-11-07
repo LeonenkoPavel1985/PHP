@@ -1,0 +1,1 @@
+﻿# Working with functions in PHP.
