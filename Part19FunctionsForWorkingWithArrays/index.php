@@ -151,7 +151,7 @@ print_r($arr_result);
 */
 
 // 11. Дан массив с элементами '1', '2', '3', '4', '5'. Создайте массив с элементами '5', '4', '3', '2', '1' (DONE).
-
+/*
 $arr = ['1', '2', '3', '4', '5'];
 echo join(' ', $arr) . '<br>';
 print_r($arr);
@@ -161,5 +161,19 @@ echo '<br>';
 $arr_result = array_reverse($arr);
 echo join(' ', $arr_result) . '<br>';
 print_r($arr_result);
+*/
+
+// 12. Дан массив с элементами 'a', 'b', 'c', 'b', 'a'. Удалите из него повторяющиеся элементы (DONE).
+
+$arr = array('a', 'b', 'c', 'b', 'a');
+echo join(' ', $arr) . '<br>';
+print_r($arr);
+
+echo '<br>';
+
+$arr_result = array_unique($arr);
+echo join(' ', $arr_result) . '<br>';
+print_r($arr_result);
+
 
 ?>
