@@ -8,6 +8,6 @@ function squarNumber($number) {
     return ' вадрат числа: ' . $number . ' равен: ' . $number*$number . '.';
 }
 
-echo squarNumber("5");
+echo squarNumber(5);
 
 ?>
