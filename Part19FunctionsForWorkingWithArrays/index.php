@@ -123,4 +123,13 @@ $values = array_values($arr);
 echo join(' ', $values) . '<br>';
 print_r($values);
 
+// 9. Даны два массива: 'green', 'blue', 'red' и ''зеленый', 'голубой', 'красный'. Создайте с их помощью массив 'green'=>'зеленый', 'blue'=>'голубой', 'red'=>'красный'. Используйте
+// функцию array_combine (DONE).
+
+$arr_one = ['green', 'blue', 'red'];
+$arr_two = ['зеленый', 'голубой', 'красный'];
+
+$arr = array_combine($arr_one, $arr_two); // Первый аргумент - первый массив (keys), второй аргумент - второй массив (values).
+print_r($arr);
+
 ?>
