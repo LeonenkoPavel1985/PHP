@@ -94,4 +94,12 @@ function imageOutput($image_path = "/images/advertising-money-business-label.jpe
 $result = imageOutput();
 echo $result . '<br>';
 
+// 8. Сделайте функцию, которая подключает CSS на сайт (DONE).
+
+function connectionCSS() {
+    return '<link rel="stylesheet" href="style.css">';
+}
+
+connectionCSS();
+
 ?>
