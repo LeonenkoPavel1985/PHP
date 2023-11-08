@@ -49,4 +49,8 @@ function numberToCube($number = 3)
 $result = numberToCube();
 echo 'Число 3 в кубе, будет равно: ' . $result . '.' . '<br>';
 
+// На static и global.
+
+// 6. Сделайте функцию, которая будет подсчитывать количество раз, которое ее вызвали.
+
 ?>
