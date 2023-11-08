@@ -51,6 +51,36 @@ echo 'Число 3 в кубе, будет равно: ' . $result . '.' . '<br>
 
 // На static и global.
 
-// 6. Сделайте функцию, которая будет подсчитывать количество раз, которое ее вызвали.
+// Глобальные и статические переменные. Глобальные видимы вне функции, статические только внутри функции.
+
+// 6. Сделайте функцию, которая будет подсчитывать количество раз, которое ее вызвали (DONE).
+
+// Статитеская переменная.
+function countStatic() {
+    static $count = 0;
+    $count++;
+    echo 'Функция вызывалась: ' . $count . ' раз(-а).' . '<br>';
+}
+
+countStatic();
+countStatic();
+countStatic();
+
+// Глобальная переменная.
+$count = 0;
+
+function countGlobal() {
+    global $count;
+    $count++;
+}
+
+countGlobal();
+countGlobal();
+countGlobal();
+countGlobal();
+countGlobal();
+
+$result = $count;
+echo 'Функция вызывалась: ' . $count . ' раз(-а).' . '<br>';
 
 ?>
