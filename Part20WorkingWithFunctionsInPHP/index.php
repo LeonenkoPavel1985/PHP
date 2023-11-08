@@ -12,14 +12,19 @@ echo squarNumber(5);
 
 // 2. Сделайте функцию, которая возвращает сумму двух чисел (DONE).
 
-function summNumber($numberOne, $NumberTwo) {
-    return 'Сумма чисел ' . $numberOne . ' и ' . $NumberTwo . ' равна: ' . $numberOne + $numberOne . '.' . '<br>';
+function summNumber($numberOne, $numberTwo) {
+    return 'Сумма чисел ' . $numberOne . ' и ' . $numberTwo . ' равна: ' . $numberOne + $numberTwo . '.' . '<br>';
 }
 
 echo summNumber(6, 7);
 
-// 3. Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
+// 3. Сделайте функцию, которая отнимает от первого числа второе и делит на третье (DONE).
 
+function threeNumbers($numberOne, $numberTwo, $numberThree ) {
+    return ($numberOne - $numberTwo) / $numberThree;
+}
 
+$result = threeNumbers(10, 6, 2);
+echo 'Резельтат работы функции равен: ' . $result . '.' . '<br>';
 
 ?>
