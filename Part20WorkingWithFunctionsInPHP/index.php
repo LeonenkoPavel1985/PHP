@@ -27,4 +27,13 @@ function threeNumbers($numberOne, $numberTwo, $numberThree ) {
 $result = threeNumbers(10, 6, 2);
 echo 'Резельтат работы функции равен: ' . $result . '.' . '<br>';
 
+// 4. Сделайте функцию, которая принимает 3 параметра: день, месяц и год, а возвращает дату в формате 30-01-2023 (DONE).
+
+function dateFormat($day, $month, $year) {
+    return date("d-m-Y", mktime(0, 0, 0, $month, $day, $year));
+}
+
+$result = dateFormat(30, 1, 2023);
+echo 'Дата: ' . $result . '.';
+
 ?>
