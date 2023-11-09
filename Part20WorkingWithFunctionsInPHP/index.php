@@ -183,6 +183,25 @@ function dateFormats($day, $month, $year, $choice) {
 }
 
 $resultDate = dateFormats(30, 1, 2023, 3);
-echo $resultDate;
+echo $resultDate . '<br>';
+
+// 13. Сделайте функцию, которая берет дату в формате sql (2023-01-31) и делает из нее нормальный формат (30.01.2023, 30-01-2023, 2023-01-30) (DONE).
+
+function sqlDateFormatNormal($sqlDate, $chose) {
+    switch($chose) {
+        case 1:
+            $phpDate = strtotime($sqlDate);
+            return date("d.m.Y", $phpDate);
+        case 2:
+            $phpDate = strtotime($sqlDate);
+            return date("d-m-Y", $phpDate);
+        case 3:
+            $phpDate = strtotime($sqlDate);
+            return date("Y-m-d", $phpDate);
+    }
+}
+
+$resultPhpDate = sqlDateFormatNormal('2023-01-31', 3);
+echo $resultPhpDate . '<br>';
 
 ?>
