@@ -204,4 +204,7 @@ function sqlDateFormatNormal($sqlDate, $chose) {
 $resultPhpDate = sqlDateFormatNormal('2023-01-31', 3);
 echo $resultPhpDate . '<br>';
 
+// 14. Сделайте функцию, которая принимает дату в нормальном формате (31.12.2023), а возвращает в sql формате. Совет: воспользуйтесь функцией explode.
+
+
 ?>
