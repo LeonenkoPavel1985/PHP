@@ -151,4 +151,20 @@ function stringTranslitRusEng($string) {
 $resultRus = stringTranslitRusEng('Pavel');
 echo $resultRus . '<br>';
 
+// 11. Сделайте функцию, которая возвращает множественное или единственное число существительного. Пример: 1 яблоко, 2 (3, 4) яблока, 5 яблок. Функция первым
+// параметром принимает число, а следующие 3 параметра — форма для единственного числа, для чисел два, три, четыре и для чисел, больших четырех (DONE).
+
+function numberNoun ($number, $string_1, $string_2, $string_3) {
+    if ($number == 1) {
+        return $number . ' ' . $string_1 . '.' . '<br>';
+    }  else if ($number >= 2 and $number <= 4) {
+        return $number . ' ' . $string_2 . '.' . '<br>';
+    } else if ($number >= 5) {
+        return $number . ' ' . $string_3 . '.' . '<br>';
+    }
+}
+
+$result = numberNoun(5, 'яблоко', 'яблока', 'яблок');
+echo $result;
+
 ?>
