@@ -217,11 +217,28 @@ echo $resultSqlDate . '<br>';
 
 // 15. Сделайте функцию, которая принимает два параметра — месяц и год, а возвращает последнее число месяца (подсказка: покопайтесь в функции date, есть готовая реализация) (DONE).
 
-function LastDayMonth($month, $year) {
+function lastDayMonth($month, $year) {
     $lastDay = date('t', mktime(0, 0, 0, $month, 1, $year));
     return $lastDay;
 }
 
-echo 'Последним числом месяца будет: ' .  LastDayMonth(11, 2023) . '.' . '<br>';
+echo 'Последним числом месяца будет: ' .  lastDayMonth(11, 2023) . '.' . '<br>';
+
+// 16. Сделайте функцию, которая принимает день и месяц, а возвращает какой в эту дату праздник. Массив праздников храните прямо в функции (DONE).
+
+function holidayDay($day, $month) {
+    $arrHolidays = [
+    '3112' => 'Новый год', '0701' => 'Рождество', '2302' => 'День защитника Отечества', '0803' => 'Международный женский день',
+    '0105' => 'Праздник Весны и Труда', '0905' => 'День победы', '1206' => 'День России', '0411' => 'День народного единства'];
+
+    $date = date('dm', mktime(0, 0, 0, $month, $day));
+
+    if (array_key_exists($date, $arrHolidays)) {
+        return 'Сейчас: ' . $arrHolidays[$date] . ' !!!';
+    }
+}
+
+$resultHoliday = holidayDay(4,11);
+echo $resultHoliday . '<br>';
 
 ?>
