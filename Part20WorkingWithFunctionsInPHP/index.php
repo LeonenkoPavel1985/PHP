@@ -241,4 +241,27 @@ function holidayDay($day, $month) {
 $resultHoliday = holidayDay(4,11);
 echo $resultHoliday . '<br>';
 
+// 17. Сделайте функцию, которая находит разницу между двумя датами: количество лет, месяцев, дней, часов, минут, секунд. Результат должен выводиться в виде массива с ключами y, m, d, h, i, s (DONE).
+
+function dateComparison($dateOne, $dateTwo) {
+    $date_1 = strtotime($dateOne);
+    $date_2 = strtotime($dateTwo);
+
+    $diff = abs($date_2 - $date_1); // Разница между двумя датами.
+
+    $years = floor($diff / (365 * 60 * 60 * 24));
+    $months = floor(($diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
+    $days = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));
+    $hours = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24 - $days * 60 * 60 * 24) / (60 * 60));
+    $minutes = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24 - $days * 60 * 60 * 24 - $hours * 60 * 60) / 60);
+    $seconds = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24 - $days * 60 * 60 * 24 - $hours * 60 * 60 - $minutes * 60));
+
+    $arrDiffDate = array('y' => $years, 'm' => $months, 'd' => $days, 'h' => $hours, 'i' => $minutes, 's' => $seconds);
+
+    return print_r($arrDiffDate);
+}
+
+$resultDiffDate = dateComparison('2022-06-01 20:15:15', '2023-11-10 13:47:00');
+echo $arrDiffDate . '<br>';
+
 ?>
