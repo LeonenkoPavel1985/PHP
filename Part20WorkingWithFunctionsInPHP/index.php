@@ -215,4 +215,13 @@ function normalDateFormatSql($normalDate) {
 $resultSqlDate = normalDateFormatSql('31.12.2023');
 echo $resultSqlDate . '<br>';
 
+// 15. Сделайте функцию, которая принимает два параметра — месяц и год, а возвращает последнее число месяца (подсказка: покопайтесь в функции date, есть готовая реализация) (DONE).
+
+function LastDayMonth($month, $year) {
+    $lastDay = date('t', mktime(0, 0, 0, $month, 1, $year));
+    return $lastDay;
+}
+
+echo 'Последним числом месяца будет: ' .  LastDayMonth(11, 2023) . '.' . '<br>';
+
 ?>
