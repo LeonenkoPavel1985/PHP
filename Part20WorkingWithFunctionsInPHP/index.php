@@ -264,4 +264,20 @@ function dateComparison($dateOne, $dateTwo) {
 $resultDiffDate = dateComparison('2022-06-01 20:15:15', '2023-11-10 13:47:00');
 echo $arrDiffDate . '<br>';
 
+// 18. Сделайте функцию, которая принимает параметром число от 1 до 12, а возвращает название месяца на русском языке (DONE).
+
+function monthName($number) {
+    $month = ['0' => "0", '1' => 'Январь', '2' => 'Февраль', '3' => 'Март', '4' => 'Апрель', '5' => 'Май',
+        '6' => 'Июнь', '7' => 'Июль', '8' => 'Август', '9' => 'Сентябрь', '10' => 'Октябрь', '11' => 'Ноябрь', '12' => 'Декабрь'];
+
+    if ($number >= 1 and $number <= 12) {
+        return $month[date('n', mktime(0, 0, 0, $number))];
+    } else {
+        return 'Не верно выбран месяц.';
+    }
+}
+
+$resultmonthName = monthName(11);
+echo $resultmonthName . '<br>';
+
 ?>
