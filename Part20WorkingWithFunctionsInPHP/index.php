@@ -319,4 +319,15 @@ function inputDateRus() {
 
 echo inputDateRus();
 
+// 21. Сделайте функцию, которая принимает параметром название дня недели на английском языке, а возвращает число от 1 до 7 (DONE).
+
+function daysNumber($dayName) {
+    $daysNumber = array('Monday' => '1', 'Tuesday' => '2', 'Wednesday' => '3', 'Thursday' => '4', 'Friday' => '5',
+        'Saturday' => '6', 'Sunday' => '7');
+    return $daysNumber[$dayName];
+}
+
+$resultmonthsNumbers = daysNumber('Monday');
+echo $resultmonthsNumbers . ' день недели.' . '<br>';
+
 ?>
