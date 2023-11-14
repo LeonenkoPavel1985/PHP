@@ -426,7 +426,7 @@ function listOutput($htmlChoice, $arr) {
         $html = '<ul>';
         foreach ($arr as $item) {
             if (is_array($item)) {
-                $html .= listOutput($item); // используем рекурсию.
+                $html .= listOutput($item); // Используем рекурсию.
             } else {
                 $html .= '<li>' . $item . '</li>';
             }
