@@ -414,4 +414,41 @@ $arr = array('1' => 'Работает!', '0' => 'Пусто!');
 echo numberToWord(1, $arr) . '<br>';
 echo numberToWord(0, $arr) . '<br>';
 
+// На списки.
+
+// 26. Сделайте функцию, которая выводит список (ul или ol — это должно регулироваться параметром). Пункты списка должны передаваться в массиве.
+// Пример: передадим этой функции массив array('один', 'два', 'три') и то, что мы хотим список ol.
+// Она должна вернуть:
+// <ol><li> один </li><li> два </li><li> три </li></ol> (DONE).
+
+function listOutput($htmlChoice, $arr) {
+    if ($htmlChoice == 'ul') {
+        $html = '<ul>';
+        foreach ($arr as $item) {
+            if (is_array($item)) {
+                $html .= listOutput($item); // используем рекурсию.
+            } else {
+                $html .= '<li>' . $item . '</li>';
+            }
+        }
+        $html .= '</ul>';
+        return $html;
+    } else if ($htmlChoice == 'ol') {
+        $html = '<ol>';
+        foreach ($arr as $item) {
+            if (is_array($item)) {
+                $html .= listOutput($item);
+            } else {
+                $html .= '<li>' . $item . '</li>';
+            }
+        }
+        $html .= '</ol>';
+        return $html;
+    }
+}
+
+$arr = array('один', 'два', 'три');
+echo (listOutput('ul', $arr)) . '<br>';
+echo (listOutput('ol', $arr)) . '<br>';
+
 ?>
