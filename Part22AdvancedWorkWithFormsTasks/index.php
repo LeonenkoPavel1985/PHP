@@ -15,4 +15,6 @@ function inputText($type, $name, $value, $placeholder) {
 
 echo inputText('text', 'name', '2', 'Введите текст');
 
+// 9. Сделайте функцию, которая создает textarea. Функция должна иметь следующие параметры: name, value, placeholder.
+
 ?>
