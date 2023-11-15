@@ -90,4 +90,24 @@ if (isset($_REQUEST['age'])) {
 
 ?>
 
-<!--5. Спросите у пользователя его возраст с помощью select. Варианты ответа сделайте такими: менее 20 лет, 20-25, 26-30, более 30.-->
+<!--5. Спросите у пользователя его возраст с помощью select. Варианты ответа сделайте такими: менее 20 лет, 20-25, 26-30, более 30 (DONE).-->
+
+<form action="index.php" method="post">
+    <h3>Сколько вам лет ?</h3>
+    <select name="age">
+        <option value="менее 20">менее 20</option> 
+        <option value="20-25">20-25</option>
+        <option value="26-30">26-30</option>
+        <option value="более 30">более 30</option>
+    </select>
+    <p><input type="submit" value="Подтвердить" /></p>
+
+</form>
+
+<?php
+
+if (isset($_REQUEST['age'])) {
+    echo 'Ваш возраст: ' . $_REQUEST['age'] . '.';
+}
+
+?>
