@@ -70,3 +70,22 @@ if (isset($_REQUEST['answer']) and $_REQUEST['answer'] == 'Да') {
 }
 
 ?>
+
+<!--4. Спросите у пользователя его возраст с помощью нескольких radio-кнопок. Варианты ответа сделайте такими: менее 20 лет, 20-25, 26-30, более 30 (DONE).-->
+
+<form action="index.php" method="post">
+    <h3>Сколько вам лет ?</h3>
+    <p>Менее 20<input type="radio" name="age" value="Менее 20" title="Менее 20" /></p>
+    <p>20 - 25<input type="radio" name="age" value="20 - 25" title="20 - 25" /></p>
+    <p>26 - 30<input type="radio" name="age" value="26 - 30" title="26 - 30" /></p>
+    <p>Более 30<input type="radio" name="age" value="Более 30" title="Более 30" /></p>
+    <p><input type="submit" value="Подтвердить" /></p>
+</form>
+
+<?php
+
+if (isset($_REQUEST['age'])) {
+    echo 'Ваш возраст: ' . $_REQUEST['age'] . '.';
+}
+
+?>
