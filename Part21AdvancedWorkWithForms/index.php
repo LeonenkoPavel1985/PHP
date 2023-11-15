@@ -49,3 +49,24 @@ if (isset($_REQUEST['languages'])) {
 }
 
 ?>
+
+<!--Radio.-->
+
+<!--3. Спросите у пользователя знает ли он PHP с помощью двух radio-кнопок. Выведите результат на экран. Сделайте так, чтобы по умолчанию один из вариантов был уже отмечен (DONE).-->
+
+<form action="index.php" method="post">
+    <h3>Знаете ли вы PHP ?</h3>
+    <p>Да<input type="radio" name="answer" value="Да" title="Да" /></p>
+    <p>Нет<input type="radio" name="answer" value="Нет" title="Нет" checked /></p>
+    <p><input type="submit" value="Подтвердить" /></p>
+</form>
+
+<?php
+
+if (isset($_REQUEST['answer']) and $_REQUEST['answer'] == 'Да') {
+    echo 'Я знаю PHP.';
+} else if (isset($_REQUEST['answer']) and $_REQUEST['answer'] == 'Нет') {
+    echo 'Я не знаю PHP.';
+}
+
+?>
