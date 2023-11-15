@@ -94,7 +94,7 @@ if (isset($_REQUEST['age'])) {
 
 <form action="index.php" method="post">
     <h3>Сколько вам лет ?</h3>
-    <select name="age">
+    <select name="age" id="">
         <option value="менее 20">менее 20</option> 
         <option value="20-25">20-25</option>
         <option value="26-30">26-30</option>
@@ -108,6 +108,27 @@ if (isset($_REQUEST['age'])) {
 
 if (isset($_REQUEST['age'])) {
     echo 'Ваш возраст: ' . $_REQUEST['age'] . '.';
+}
+
+?>
+
+<!--6. Спросите у пользователя с помощью мультиселекта, какие из языков он знает: html, css, php, javascript. Выведите на экран те языки, которые знает пользователь (DONE).-->
+
+<form action="index.php" method="post">
+    <h4>Какие языки программирования вы знаете ?</h4>
+    <select name="proglanguage[]" size="4" multiple="multiple" id="">
+        <option value="html">html</option>
+        <option value="css">css</option>
+        <option value="php">php</option>
+        <option value="javascript">javascript</option>
+    </select>
+    <p><input type="submit" value="Подтвердить" /></p>
+</form>
+
+<?php
+
+if (isset($_REQUEST['proglanguage'])) {
+    echo 'Я знаю: ' . implode(', ', $_REQUEST['proglanguage']) . '.';
 }
 
 ?>
