@@ -4,13 +4,10 @@
 <!--1. Спросите у пользователя имя с помощью формы. Сделайте чекбокс: если он отмечен, то поприветствуйте пользователя, если не отмечен — попрощайтесь с пользователем (DONE).-->
 
 <form action="index.php" method="post">
-    Введите имя: <input type="text" name="name" />
-    <br />
-    <input type="hidden" name="checkbox" value="0" />
-    <input type="checkbox" name="checkbox" value="1"/>
-    <br />
-    <br />
-    <input type="submit" value="Подтвердить" />
+    <p>Введите имя: <input type="text" name="name" /></p>
+    <p><input type="hidden" name="checkbox" value="0" /></p>
+    <p><input type="checkbox" name="checkbox" value="1" /></p>
+    <p><input type="submit" value="Подтвердить" /></p>
 </form>
 
 <?php
