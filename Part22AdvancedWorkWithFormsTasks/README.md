@@ -13,6 +13,6 @@
      $arr = array(
      0=>array('value'=>'php', 'text'=>'Язык PHP'),
      0=>array('value'=>'html', 'text'=>'Язык HTML'),
-     ).
+     ) (DONE).
 
 

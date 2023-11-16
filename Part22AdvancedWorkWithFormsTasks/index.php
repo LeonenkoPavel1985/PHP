@@ -55,7 +55,7 @@ function checkboxFlag($name) {
     } else {
         $value = '';
     }
-    return '<input type="hidden" name="' . $name . '" value="0"> <input type="checkbox" name="' . $name . '" value="1" ' . $value . '>';
+    return '<input type="hidden" name="' . $name . '" value="0"> <input type="checkbox" name="' . $name . '" value="1" ' . $value . '>' . '<br>';
 }
 
 echo checkboxFlag('Отмечен');
@@ -64,10 +64,24 @@ echo checkboxFlag('Отмечен');
      $arr = array(
      0=>array('value'=>'php', 'text'=>'Язык PHP'),
      0=>array('value'=>'html', 'text'=>'Язык HTML'),
-     ).
+     ) (DONE).
 */
 
+$arr = array(
+    0 => array('value' => 'php', 'text' => 'Язык PHP'),
+    1 => array('value' => 'html', 'text' => 'Язык HTML')
+);
 
+function select($arr) {
+    $options = '';
+    foreach ($arr as $elem) {
+        $options .= '<option value="' . htmlspecialchars($elem["value"]) . '">';
+        $options .= htmlspecialchars($elem["text"]) . '</option>';
+    }
+    return "<select>$options</select>" . '<br>';
+}
+
+echo select($arr);
 
 ?>
 
