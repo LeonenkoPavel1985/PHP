@@ -36,4 +36,15 @@ function inputTextArea($name, $value, $placeholder) {
 
 echo inputTextArea('textarea', '', 'textarea(Введите текст)');
 
+// 10. Модифицируйте функцию из предыдущей задачи так, чтобы она сохраняла значение textarea после отправки (DONE).
+
+function inputTextAreaSave($name, $value, $placeholder) {
+    if (isset($_GET['name'])) {
+        $name = $_GET['name'];
+    }
+    return '<input type="textarea"' . '"name="' . $name . '"value="' . $value = htmlspecialchars($_GET['name']) . '"placeholder="' . $placeholder . '">' . '<br>';
+}
+
+echo inputTextAreaSave('textarea', '111', 'textarea(Введите текст)');
+
 ?>
