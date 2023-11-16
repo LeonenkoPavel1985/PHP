@@ -3,18 +3,30 @@
 // Задачи.
 
 // 7. Сделайте функцию, которая создает инпут type text или password. Функция должна иметь следующие параметры: type, name, value, placeholder (DONE).
-// 8. Модифицируйте функцию из предыдущей задачи так, чтобы она сохраняла значение инпута после отправки (DONE).
-
 
 function inputText($type, $name, $value, $placeholder) {
     if (isset($_REQUEST['name'])) {
-        $value = $_REQUEST['name'];
+        $name = $_REQUEST['name'];
     }
-    return '<input type="' . $type . '" name="' . $name . '" value="' . $value . '" placeholder="' . $placeholder . '">';
+    return '<input type="' . $type . '" name="' . $name . '" value="' . $value . '" placeholder="' . $placeholder . '">' . '<br>';
 }
 
-echo inputText('text', 'name', '2', 'Введите текст');
+echo inputText('text', 'name', '', 'Введите текст');
+
+// 8. Модифицируйте функцию из предыдущей задачи так, чтобы она сохраняла значение инпута после отправки (DONE).
+
+function inputTextSave($type, $name, $value, $placeholder)
+{
+    if (isset($_GET['name'])) {
+        $name = $_GET['name'];
+    }
+    return '<input type="' . $type . '" name="' . $name . '" value= "' . $value = htmlspecialchars($_GET['name']) . '" placeholder="' . $placeholder . '">' . '<br>';
+}
+
+echo inputTextSave('text', 'name', '111', 'Введите текст');
 
 // 9. Сделайте функцию, которая создает textarea. Функция должна иметь следующие параметры: name, value, placeholder.
+
+
 
 ?>
