@@ -47,4 +47,27 @@ function inputTextAreaSave($name, $value, $placeholder) {
 
 echo inputTextAreaSave('textarea', '111', 'textarea(Введите текст)');
 
+//  11. Сделайте функцию, которая создает чекбокс. Если чекбокс не отмечен — функциядолжна отправлять 0 (то есть нужно сделать hidden инпут), если отмечен — 1 (DONE).
+
+function checkboxFlag($name) {
+    if (isset($_REQUEST[$name]) and $_REQUEST[$name] == 1) {
+        $value = 'Отмечен';
+    } else {
+        $value = '';
+    }
+    return '<input type="hidden" name="' . $name . '" value="0"> <input type="checkbox" name="' . $name . '" value="1" ' . $value . '>';
+}
+
+echo checkboxFlag('Отмечен');
+
+/* 12. Сделайте функцию, которая будет создавать селект. Функция должна принимать многомерный массив такого типа:
+     $arr = array(
+     0=>array('value'=>'php', 'text'=>'Язык PHP'),
+     0=>array('value'=>'html', 'text'=>'Язык HTML'),
+     ).
+*/
+
+
+
 ?>
+
