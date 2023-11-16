@@ -25,8 +25,15 @@ function inputTextSave($type, $name, $value, $placeholder)
 
 echo inputTextSave('text', 'name', '111', 'Введите текст');
 
-// 9. Сделайте функцию, которая создает textarea. Функция должна иметь следующие параметры: name, value, placeholder.
+// 9. Сделайте функцию, которая создает textarea. Функция должна иметь следующие параметры: name, value, placeholder (DONE).
 
+function inputTextArea($name, $value, $placeholder) {
+    if (isset($_REQUEST['name'])) {
+        $name = $_REQUEST['name'];
+    }
+    return '<input type="textarea"' . '"name="' . $name . '"value="' . $value . '"placeholder="' . $placeholder . '">' . '<br>';
+}
 
+echo inputTextArea('textarea', '', 'textarea(Введите текст)');
 
 ?>
