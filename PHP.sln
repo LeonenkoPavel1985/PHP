@@ -47,6 +47,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part21AdvancedWorkWithForms
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part22AdvancedWorkWithFormsTasks", "Part22AdvancedWorkWithFormsTasks\Part22AdvancedWorkWithFormsTasks.phpproj", "{76E58AE9-BF5F-430A-A2B3-F6F2428D1AAB}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part23WorkBasedOnSQL", "Part23WorkBasedOnSQL\Part23WorkBasedOnSQL.phpproj", "{85EF3D92-1B24-4746-B781-3C4E60C61906}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{76E58AE9-BF5F-430A-A2B3-F6F2428D1AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E58AE9-BF5F-430A-A2B3-F6F2428D1AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E58AE9-BF5F-430A-A2B3-F6F2428D1AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85EF3D92-1B24-4746-B781-3C4E60C61906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85EF3D92-1B24-4746-B781-3C4E60C61906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85EF3D92-1B24-4746-B781-3C4E60C61906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85EF3D92-1B24-4746-B781-3C4E60C61906}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
