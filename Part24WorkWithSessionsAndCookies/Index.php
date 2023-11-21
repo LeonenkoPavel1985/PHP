@@ -109,3 +109,5 @@ if (!empty($_SESSION['town']) and !empty($_SESSION['age'])) {
 }
 
 ?>
+
+<!--Part 24 Work With Sessions And Cookies (Sessions - DONE).-->
