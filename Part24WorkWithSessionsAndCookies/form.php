@@ -21,6 +21,7 @@ if (!empty($_SESSION['town']) and !empty($_SESSION['age'])) {
 
 <?php
 
-echo '<br /><a href="index.php">index</a>';
+echo '<br /><a href="logout.php">Logout</a>';
+echo '<br /><a href="index.php">Index</a>';
 
 ?>
