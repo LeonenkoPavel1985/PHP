@@ -76,13 +76,35 @@ if (!empty($_SESSION['email'])) {
 
 <?php
 
+session_start();
+
 if (!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 1;
-    echo 'Вы впервый раз посетили на страницу.' . '<br>';
+    echo 'Вы впервый раз посетили страницу.' . '<br>';
 } else {
     ++$_SESSION['counter'];
 }
 
 echo 'Вы обновили страницу: ' . $_SESSION['counter'] . ' раз(-а).' . '<br>';
+
+?>
+
+<!--5. Сделайте две страницы: index.php и form.php. При заходе на index спросите с помощью формы город и возраст пользователя. На form.php сделайте форму с полями 'Имя', 'Возраст', 'Город'. 
+    При заходе на form.php сделайте так, чтобы поля 'Возраст' и 'Город' уже были заполнены (DONE).-->
+
+<form action="" method="get">
+    <p>Введите город: <input type="text" name="town" /> </p>
+    <p>Введите возраст: <input type="text" name="age" /></p>
+    <p><input type="submit" value="Подтвердить" /></p>
+</form>
+
+<?php
+
+if (!empty($_SESSION['town']) and !empty($_SESSION['age'])) {
+    session_start();
+    $_SESSION['town'] = $_REQUEST['town'];
+    $_SESSION['age'] = $_REQUEST['age'];
+    echo '<br /><a href="form.php">form</a>' . '<br>';
+}
 
 ?>
