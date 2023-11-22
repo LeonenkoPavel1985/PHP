@@ -57,6 +57,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part26WorkWithSessionsAndCo
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part27OOP", "Part27OOP\Part27OOP.phpproj", "{1D0DA64A-1AB8-44CB-98E9-47F8CB742EC4}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part28OOPTasks", "Part28OOPTasks\Part28OOPTasks.phpproj", "{6C90A4C0-C353-437E-B893-C52EB8271FB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{1D0DA64A-1AB8-44CB-98E9-47F8CB742EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0DA64A-1AB8-44CB-98E9-47F8CB742EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0DA64A-1AB8-44CB-98E9-47F8CB742EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
