@@ -53,6 +53,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part24WorkWithSessionsAndCo
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part25Cookies", "Part25Cookies\Part25Cookies.phpproj", "{59E511F5-638B-4BB4-82B8-900C5CD66C44}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part26WorkWithSessionsAndCookiesTasks", "Part26WorkWithSessionsAndCookiesTasks\Part26WorkWithSessionsAndCookiesTasks.phpproj", "{79D65CB3-61D4-41E8-BB09-EAC32692F70B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{59E511F5-638B-4BB4-82B8-900C5CD66C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E511F5-638B-4BB4-82B8-900C5CD66C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E511F5-638B-4BB4-82B8-900C5CD66C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D65CB3-61D4-41E8-BB09-EAC32692F70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D65CB3-61D4-41E8-BB09-EAC32692F70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D65CB3-61D4-41E8-BB09-EAC32692F70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D65CB3-61D4-41E8-BB09-EAC32692F70B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
