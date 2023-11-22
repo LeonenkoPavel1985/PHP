@@ -21,3 +21,22 @@ if (isset($_REQUEST['country'])) {
 }
 
 ?>
+
+<?php
+
+// 12. Установите куку с именем age. Запишите туда случайное число от 10 до 70 (с помощью mt_rand). Сделайте так, чтобы эта кука установилась на 1 час, на 3 часа,
+// на 1 день, на год, на 10 лет, до конца текущего дня, до конца текущего года (DONE).
+
+$age = mt_rand(10, 70);
+
+setcookie('age', $age, time() + 3600); // Cookee сроком действия 1 час.
+setcookie('age', $age, time() + 10800); // Cookee сроком действия 3 часа.
+setcookie('age', $age, time() + 60 * 60 * 24); // Cookee сроком действия 1 день.
+setcookie('age', $age, time() + 31556926); // Cookee сроком действия 1 год.
+setcookie('age', $age, time() + (365 * 24 * 60 * 60)); // Cookee сроком действия 1 год.
+setcookie('age', $age, time() + ((365 * 24 * 60 * 60)*10)); // Cookee сроком действия 10 лет.
+setcookie('age', $age, time() + (10 * 365 * 24 * 60 * 60)); // Cookee сроком действия 10 лет.
+setcookie('age', $age, 86400 - 3600 * date("H") - 60 * date("i") - date("s")); // Cookee сроком действия до конца текущего дня.
+setcookie('age', $age, date("Y-m-d H:i:s", strtotime("December 31"))); // Cookee сроком действия до конца текущего года.
+
+?>
