@@ -59,6 +59,8 @@ Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part27OOP", "Part27OOP\Part
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part28OOPTasks", "Part28OOPTasks\Part28OOPTasks.phpproj", "{6C90A4C0-C353-437E-B893-C52EB8271FB0}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "Part29FunctionsOfWorkWithFoldersAndFiles", "Part29FunctionsOfWorkWithFoldersAndFiles\Part29FunctionsOfWorkWithFoldersAndFiles.phpproj", "{A700F79A-B18E-4822-A370-38209416ED8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,10 @@ Global
 		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C90A4C0-C353-437E-B893-C52EB8271FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A700F79A-B18E-4822-A370-38209416ED8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A700F79A-B18E-4822-A370-38209416ED8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A700F79A-B18E-4822-A370-38209416ED8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A700F79A-B18E-4822-A370-38209416ED8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
