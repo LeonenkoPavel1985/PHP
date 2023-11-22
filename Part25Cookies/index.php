@@ -40,3 +40,5 @@ setcookie('age', $age, 86400 - 3600 * date("H") - 60 * date("i") - date("s")); /
 setcookie('age', $age, date("Y-m-d H:i:s", strtotime("December 31"))); // Cookee сроком действия до конца текущего года.
 
 ?>
+
+<!--Part 25 Cookies (DONE).-->
