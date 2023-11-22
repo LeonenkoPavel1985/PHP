@@ -3,6 +3,7 @@
 
 <!--10. Сделайте две страницы: index.php и test.php. При заходе на index спросите с помощью формы страну пользователя, запишите ее в куки с именем country. При заходе на test.php выведите 
     страну пользователя (DONE).-->
+<!--11. Удалите куку с именем country (DONE).-->
 
 <form action="index.php" method="get">
     <p>Введите страну: <input type="text" name="country" /></p>
@@ -13,8 +14,10 @@
 
 if (isset($_REQUEST['country'])) {
    // setcookie('country', $_REQUEST['country']); // Просто устанавливаем cookee.
-    setcookie('country', $_REQUEST['country'], time() + 3600); // Cookee сроком действия 1 час.
-    echo '<br /><a href="test.php">test</a>' . '<br>';
+   setcookie('country', $_REQUEST['country'], time() + 3600); // Cookee сроком действия 1 час.
+   // Для удаления cookie достаточно в качестве срока действия указать какое-либо время в прошлом.
+   setcookie('country', $_REQUEST['country'], time() - 3600);
+   echo '<br /><a href="test.php">test</a>' . '<br>';
 }
 
 ?>
