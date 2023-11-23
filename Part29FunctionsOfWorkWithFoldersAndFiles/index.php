@@ -51,4 +51,12 @@ echo 'Текст из указанного файла:' . '<br>' . $fileRead;
 $section = file_get_contents('./test.txt', FALSE, NULL, 2, 5); // Cмещение и длинна строки.
 var_dump($section);
 
+// 3. Переименуйте файл 'test.txt' в 'mir.txt' (DONE).
+
+// rename('Старое имя', 'Новое имя', 'Ресурс контекстного потока')
+rename('./test.txt', 'mir.txt');
+echo 'Файл переименован.';
+
+
+
 ?>
