@@ -4,7 +4,7 @@
 
 file_put_contents, file_get_contents, rename, copy, filesize, unset, file_exists.
 
-1. Создайте файл 'test.txt' и запишите в него фразу 'Привет, мир!'.
+1. Создайте файл 'test.txt' и запишите в него фразу 'Привет, мир!' (DONE).
 2. Считайте данные из файла 'test.txt' и выведите их на экран.
 3. Переименуйте файл 'test.txt' в 'mir.txt'.
 4. Создайте копию файла 'mir.txt' и назовите ее 'world.txt'.
