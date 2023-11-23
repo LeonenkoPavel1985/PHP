@@ -2,14 +2,14 @@
 
 ФУНКЦИИ РАБОТЫ С ПАПКАМИ И ФАЙЛАМИ.
 
-file_put_contents, file_get_contents, rename, copy, filesize, unset, file_exists.
+file_put_contents, file_get_contents, rename, copy, filesize, unlink, file_exists.
 
 1. Создайте файл 'test.txt' и запишите в него фразу 'Привет, мир!' (DONE).
 2. Считайте данные из файла 'test.txt' и выведите их на экран (DONE).
 3. Переименуйте файл 'test.txt' в 'mir.txt' (DONE).
 4. Создайте копию файла 'mir.txt' и назовите ее 'world.txt' (DONE).
 5. Определите размер файла 'world.txt'. Выведите его на экран (DONE).
-6. Удалите файл 'world.txt'.
+6. Удалите файл 'world.txt' (DONE).
 7. Проверьте существование файлов 'world.txt' и 'mir.txt'.
 
 Работа с file, PHP_EOL.

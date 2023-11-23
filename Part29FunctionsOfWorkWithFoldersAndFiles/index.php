@@ -1,13 +1,13 @@
 <?php
 
-// file_put_contents, file_get_contents, rename, copy, filesize, unset, file_exists.
+// file_put_contents, file_get_contents, rename, copy, filesize, unlink, file_exists.
 
 // file_put_contents — Пишет данные в файл (Функция идентична последовательным успешным вызовам функций fopen(), fwrite() и fclose()).
 // file_get_contents — Считывает весь файл в строку.
 // rename — Переименовывает файл или каталог.
 // copy — Копирует файл.
 // filesize - — Получает размер файла (возвращает размер файла в байтах).
-// unset — Удаляет переменную.
+// unlink — Удаляет файл.
 // file_exists — Проверяет, существует ли файл или каталог.
 
 // 1. Создайте файл 'test.txt' и запишите в него фразу 'Привет, мир!' (DONE).
@@ -78,7 +78,7 @@ if (!copy($file, $copyFile)) {
 */
 
 // 5. Определите размер файла 'world.txt'. Выведите его на экран (DONE).
-
+/*
 $file = 'world.txt';
 
 $fileSize = filesize($file);
@@ -93,7 +93,21 @@ echo 'Размер файла составляет: ' . $fileSizeMegabyte . ' м
 
 $fileSizeGigabyte = $fileSizeMegabyte / 1000;
 echo 'Размер файла составляет: ' . $fileSizeGigabyte . ' гагабайт.' . '<br>';
+*/
 
+// 6. Удалите файл 'world.txt' (DONE).
 
+// Просто удаляем.
+unlink('world.txt');
+echo 'Файл успешно удален.';
+
+// С созданием и удалением.
+$file = fopen('world.txt', 'a');
+fwrite($file, 'Привет, мир!');
+fclose($file);
+echo 'Файл: ' . $file . ' успешно создан.' . '<br>';
+
+unlink('world.txt');
+echo 'Файл успешно удален.';
 
 ?>
