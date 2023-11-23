@@ -6,7 +6,7 @@
 // file_get_contents — Считывает весь файл в строку.
 // rename — Переименовывает файл или каталог.
 // copy — Копирует файл.
-// filesize - — Получает размер файла.
+// filesize - — Получает размер файла (возвращает размер файла в байтах).
 // unset — Удаляет переменную.
 // file_exists — Проверяет, существует ли файл или каталог.
 
@@ -61,7 +61,7 @@ echo 'Файл переименован.';
 */
 
 // 4. Создайте копию файла 'mir.txt' и назовите ее 'world.txt' (DONE).
-
+/*
 // Первый способ:
 copy('mir.txt', 'world.txt');
 echo 'Файл скопирован с новым именем.';
@@ -75,5 +75,25 @@ if (!copy($file, $copyFile)) {
 } else {
     echo 'Файл скопирован с новым именем.';
 }
+*/
+
+// 5. Определите размер файла 'world.txt'. Выведите его на экран (DONE).
+
+$file = 'world.txt';
+
+$fileSize = filesize($file);
+echo 'Размер файла составляет: ' . $fileSize . ' байт.' . '<br>';
+
+// Дополнительно.
+$fileSizeKilobyte = $fileSize / 1000;
+echo 'Размер файла составляет: ' . $fileSizeKilobyte . ' килобайт.' . '<br>';
+
+$fileSizeMegabyte = $fileSizeKilobyte / 1000;
+echo 'Размер файла составляет: ' . $fileSizeMegabyte . ' мегабайт.' . '<br>';
+
+$fileSizeGigabyte = $fileSizeMegabyte / 1000;
+echo 'Размер файла составляет: ' . $fileSizeGigabyte . ' гагабайт.' . '<br>';
+
+
 
 ?>

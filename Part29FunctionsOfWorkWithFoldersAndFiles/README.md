@@ -8,7 +8,7 @@ file_put_contents, file_get_contents, rename, copy, filesize, unset, file_exists
 2. Считайте данные из файла 'test.txt' и выведите их на экран (DONE).
 3. Переименуйте файл 'test.txt' в 'mir.txt' (DONE).
 4. Создайте копию файла 'mir.txt' и назовите ее 'world.txt' (DONE).
-5. Определите размер файла 'world.txt'. Выведите его на экран.
+5. Определите размер файла 'world.txt'. Выведите его на экран (DONE).
 6. Удалите файл 'world.txt'.
 7. Проверьте существование файлов 'world.txt' и 'mir.txt'.
 
