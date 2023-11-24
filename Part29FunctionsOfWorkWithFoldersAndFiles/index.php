@@ -96,7 +96,7 @@ echo 'Размер файла составляет: ' . $fileSizeGigabyte . ' г
 */
 
 // 6. Удалите файл 'world.txt' (DONE).
-
+/*
 // Просто удаляем.
 unlink('world.txt');
 echo 'Файл успешно удален.';
@@ -109,5 +109,23 @@ echo 'Файл: ' . $file . ' успешно создан.' . '<br>';
 
 unlink('world.txt');
 echo 'Файл успешно удален.';
+*/
+
+// 7. Проверьте существование файлов 'world.txt' и 'mir.txt' (DONE).
+
+$fileName_1 = './world.txt';
+$fileName_2 = './mir.txt';
+
+if (file_exists($fileName_1)) {
+    echo 'Файл ' . $fileName_1 . ' существует.' . '<br>';
+} else {
+    echo 'Файл ' . $fileName_1 . ' не существует.' . '<br>';
+}
+
+if (file_exists($fileName_2)) {
+    echo 'Файл ' . $fileName_2 . ' существует.' . '<br>';
+} else {
+    echo 'Файл ' . $fileName_2 . ' не существует.' . '<br>';
+}
 
 ?>

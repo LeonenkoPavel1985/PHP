@@ -10,7 +10,7 @@ file_put_contents, file_get_contents, rename, copy, filesize, unlink, file_exist
 4. Создайте копию файла 'mir.txt' и назовите ее 'world.txt' (DONE).
 5. Определите размер файла 'world.txt'. Выведите его на экран (DONE).
 6. Удалите файл 'world.txt' (DONE).
-7. Проверьте существование файлов 'world.txt' и 'mir.txt'.
+7. Проверьте существование файлов 'world.txt' и 'mir.txt' (DONE).
 
 Работа с file, PHP_EOL.
 
