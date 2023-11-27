@@ -177,10 +177,35 @@ if (!mkdir($structure, 0777, true)) {
 */
 
 // 11. Выведите на экран название всех файлов из папки (DONE).
-
+/*
 $dir = './folder';
 
-$files = scandir($dir);
+$files = scandir($dir, SCANDIR_SORT_DESCENDING);
 print_r($files);
+*/
+
+// 12. Выведите на экран название всех файлов с расширением txt из папки (DONE).
+
+// Первый способ. Использование функции glob(). glob — Находит файловые пути, совпадающие с шаблоном.
+
+$files = glob('./folder/*.txt');
+
+echo 'Файлы с расширением txt в указанной папке: ' . '<br>';
+foreach ($files as $file) {
+    echo $file . '<br>';
+}
+
+// Второй способ.Использование функции scandir().
+$dir = './folder';
+$files = scandir($dir);
+
+foreach ($files as $file) {
+    $extension = pathinfo($file, PATHINFO_EXTENSION);
+
+    if ($extension == 'txt') {
+        echo $file . '<br>';
+    }
+}
+
 
 ?>
