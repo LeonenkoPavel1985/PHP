@@ -38,7 +38,8 @@ $power->fifthDegree();
 
 // 2. Сделайте класс-калькулятор. Класс должен иметь следующие методы: сложение, вычитание, умножение, деление. Каждый метод должен принимать параметром два числа (DONE).
 
-class calculator {
+class calculator 
+{
     private $result;
 
     function addition($number_1, $number_2) {
@@ -69,5 +70,40 @@ $calculator->addition(2, 3);
 $calculator->subtraction(10, 6);
 $calculator->multiplication(3, 3);
 $calculator->division(12, 6);
+
+// 3. Сделайте класс Sqrt, который извлекает из числа корень нужной степени (используя pow: pow(4, 0.5) – это квадратный корень). Класс должен иметь следующие методы: корни 2, 3, 4, 5 степени (DONE).
+
+class Sqrt
+{
+    private $result;
+
+    function secondRoot($number)
+    {
+        $this->result = pow($number,0.5);
+        echo 'Корень во второй степени вашего числа равен: ' . $this->result . '.' . '<br>';
+    }
+
+    function thirdDegree($number) {
+        $this->result = pow($number, 1 / 3);
+        echo 'Корень в третьей степени вашего числа равен: ' . $this->result . '.' . '<br>';
+    }
+
+    function fourthDegree($number) {
+        $this->result = pow($number, 1 / 4);
+        echo 'Корень в четвертой степени вашего числа равен: ' . $this->result . '.' . '<br>';
+    }
+
+    function fifthDegree($number) {
+        $this->result = pow($number, 1 / 5);
+        echo 'Корень в пятой степени вашего числа равен: ' . $this->result . '.' . '<br>';
+    }
+
+}
+
+$sqrt = new Sqrt();
+$sqrt->secondRoot(16);
+$sqrt->thirdDegree(27);
+$sqrt->fourthDegree(174);
+$sqrt->fifthDegree(1000);
 
 ?>
