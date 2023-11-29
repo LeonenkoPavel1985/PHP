@@ -38,13 +38,13 @@ $power->fifthDegree();
 
 // 2. Сделайте класс-калькулятор. Класс должен иметь следующие методы: сложение, вычитание, умножение, деление. Каждый метод должен принимать параметром два числа (DONE).
 
-class calculator 
+class calculator
 {
     private $result;
 
     function addition($number_1, $number_2) {
         $this->result = $number_1 + $number_2;
-        echo 'Результат сложения двух чисел равна: ' . $this->result . '.' . '<br>';
+        echo 'Результат сложения двух чисел равен: ' . $this->result . '.' . '<br>';
 
     }
 
@@ -105,5 +105,52 @@ $sqrt->secondRoot(16);
 $sqrt->thirdDegree(27);
 $sqrt->fourthDegree(174);
 $sqrt->fifthDegree(1000);
+
+// 4. Сделайте класс-оболочку над $_SERVER. Класс должен иметь следующие методы: REQUEST_URI, SERVER_ADDR, DOCUMENT_ROOT, HTTP_HOST, HTTP_USER_AGENT', QUERY_STRING (DONE).
+
+// $_SERVER - это суперглобальная переменная PHP, которая содержит информацию о заголовках, путях и расположении скриптов.
+// В массиве $_SERVER хранятся важные переменные, которые помещаются в него php-интерпритатором.
+// $_SERVER['REQUEST_URI'] - показывает часть адреса или ссылки.
+// $_SERVER['SERVER_ADDR'] - IP-адрес, с которого пользователь просматривает текущую страницу.
+// $_SERVER['DOCUMENT_ROOT'] - корневой каталог документа, в котором выполняется текущий сценарий, как определено в файле конфигурации сервера.
+// $_SERVER['HTTP_HOST'] - возвращает заголовок Host из текущего запроса.
+// $_SERVER['HTTP_USER_AGENT'] - необходим для вывода информации об операционной системе клиента и версии и названии браузера.
+// $_SERVER['QUERY_STRING'] - позволяет получить часть ссылки после знака вопроса, то есть параметры, переданные скрипту.
+
+class ShellServer {
+
+    function requestUri() {
+        echo 'Просмотр части ссылки: ' . $_SERVER['REQUEST_URI'] . '<br>';
+    }
+
+    function serverAddr() {
+        echo 'IP-адрес, с которого пользователь просматривает текущую страницу: ' . $_SERVER['SERVER_ADDR'] . '<br>';
+    }
+
+    function documentRoot() {
+        echo 'Корневой каталог документа, в котором выполняется текущий сценарий: ' . $_SERVER['DOCUMENT_ROOT'] . '<br>';
+    }
+
+    function httpHost() {
+        echo 'Заголовок Host из текущего запроса: ' . $_SERVER['HTTP_HOST'] . '<br>';
+    }
+
+    function httpUserAgent() {
+        echo 'Определение версии браузера и операционки клиента: ' . $_SERVER['HTTP_USER_AGENT'] . '<br>';
+    }
+
+    function queryString() {
+        echo 'Параметры, переданные скрипту: ' . $_SERVER['QUERY_STRING']  . '<br>';
+    }
+}
+
+$shellServer = new ShellServer();
+
+$shellServer->requestUri();
+$shellServer->serverAddr();
+$shellServer->documentRoot();
+$shellServer->httpHost();
+$shellServer->httpUserAgent();
+$shellServer->queryString();
 
 ?>
