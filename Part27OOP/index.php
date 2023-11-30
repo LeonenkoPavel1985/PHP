@@ -45,7 +45,6 @@ class calculator
     function addition($number_1, $number_2) {
         $this->result = $number_1 + $number_2;
         echo 'Результат сложения двух чисел равен: ' . $this->result . '.' . '<br>';
-
     }
 
     function subtraction($number_1, $number_2) {
@@ -152,5 +151,84 @@ $shellServer->documentRoot();
 $shellServer->httpHost();
 $shellServer->httpUserAgent();
 $shellServer->queryString();
+
+echo '<br>';
+
+// Private и public.
+
+// public: к свойствам и методам, объявленным с данным модификатором, можно обращаться из внешнего кода и из любой части программы.
+// protected: свойства и методы с данным модификатором доступны из текущего класса, а также из классов-наследников.
+// private: свойства и методы с данным модификатором доступны только из текущего класса.
+
+// 5. Напишите класс-сумматор. Класс должен иметь следующие методы: сумма двух чисел, сумма квадратов двух чисел, сумма кубов двух чисел и так далее до 5-той степени. Класс должен
+// иметь private методы возведения в степень (без pow) и public методы суммирования (DONE).
+
+class Adder {
+    private $degreeNum1; // Степень числа 1.
+    private $degreeNum2; // Степень числа 2.
+    private $summ; // Сумма.
+
+    public function summ($number_1, $number_2){
+        $this->summ = $number_1 + $number_2;
+        echo "Сумма чисел $number_1 и $number_2 равна: $this->summ.<br>";
+    }
+
+    private function secondDegree($number_1, $number_2) {
+        $this->degreeNum1 = $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2;
+        echo "Квадраты чисел $number_1 и $number_2 равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    public function summSquaresNumbers() {
+        $this->secondDegree(2, 2);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма квадратов указанных чисел равна: $this->summ.<br>";
+    }
+
+    private function cubesNumbers($number_1, $number_2) {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2;
+        echo "Кубы чисел $number_1 и $number_2 равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    public function summCubesNumbers() {
+        $this->cubesNumbers(3, 3);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма кубов указанных чисел равна: $this->summ.<br>";
+    }
+
+    private function fourthDegreeNumbers($number_1, $number_2) {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2 * $number_2;
+        echo "Числа $number_1 и $number_2 в четвертой степени равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    public function summFourthDegreeNumbers() {
+        $this->fourthDegreeNumbers(4, 4);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма чисел в четвертой степени равна: $this->summ.<br>";
+    }
+
+    private function fifthDegreeNumbers($number_1, $number_2) {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2 * $number_2 * $number_2;
+        echo "Числа $number_1 и $number_2 в пятой степени равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    public function summFifthDegree() {
+        $this->fifthDegreeNumbers(5, 5);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма чисел в пятой степени равна: $this->summ.<br>";
+    }
+}
+
+$adder = new Adder();
+
+$adder->summ(2, 2);
+$adder->summSquaresNumbers();
+$adder->summCubesNumbers();
+$adder->summFourthDegreeNumbers();
+$adder->summFifthDegree();
+
 
 ?>
