@@ -230,5 +230,43 @@ $adder->summCubesNumbers();
 $adder->summFourthDegreeNumbers();
 $adder->summFifthDegree();
 
+// 6. Напишите класс-оболочку над cookie. Оболочка должна представлять собой набор функций: сохранение куки, удаление куки, редактирование куки, считывание куки.
+// По умолчанию кука должна устанавливаться на 1 год (DONE).
+
+class CookieShell
+{
+    public function setCookies($name, $value, $time = 31536000)
+    {
+        setcookie($name, $value, time() + $time, "/");
+        echo 'Cookie сохранены (по умолчанию хранятся 1 год).' . '<br>';
+    }
+
+    public function getCookies($name)
+    {
+        if (isset($_COOKIE[$name])) {
+            echo $_COOKIE[$name];
+        } else {
+            echo 'Cookie пуст.' . '<br>';
+        }
+    }
+
+    public function updateCookie($name, $value, $time = 31536000)
+    {
+        setcookie($name, $value, time() + $time, "/");
+        echo 'Cookie изменены (по умолчанию хранятся 1 год).' . '<br>';
+    }
+
+    public function deleteCookies($name)
+    {
+        setcookie($name, time() - 3600);
+        echo 'Cookie удален.' . '<br>';
+    }
+}
+
+$cookieShell = new CookieShell();
+$cookieShell->setCookies('1', 'Павел');
+$cookieShell->getCookies('');
+$cookieShell->updateCookie('2', 'Иван');
+$cookieShell->deleteCookies('');
 
 ?>
