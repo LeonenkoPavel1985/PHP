@@ -263,10 +263,59 @@ class CookieShell
     }
 }
 
-$cookieShell = new CookieShell();
-$cookieShell->setCookies('1', 'Павел');
-$cookieShell->getCookies('');
-$cookieShell->updateCookie('2', 'Иван');
-$cookieShell->deleteCookies('');
+// 7. Сделайте класс-геометрический-калькулятор. Класс должен иметь следующие методы: площадь квадрата, площадь прямоугольника, объем куба, объем параллелепипеда, длина окружности
+// через радиус, площадь круга, объем шара. Класс должен иметь private свойство — число пи (DONE).
+
+class GeometricCalculator
+{
+    private $pi = 3.14;
+
+    public function areaOfTheSquare($side) {
+        $square = pow($side, 2);
+        echo 'Площадь квадрата со сторонами равными ' . $side . ' см. равна: ' . $square . ' см.' . '<br>';
+    }
+
+    public function areaOfTheRectangle($side_A, $side_B) {
+        $square = $side_A * $side_B;
+        echo 'Площадь прямоугольника со сторонами равными ' . $side_A  . ' и ' . $side_B . ' см. равна: ' . $square . ' см. кв.' . '<br>';
+    }
+
+    public function cubeVolume($ribLength) {
+        $volume = $ribLength * $ribLength * $ribLength;
+        echo 'Объем куба с длинной ребра равной ' . $ribLength . ' см. равен: ' . $volume . ' см. куб.' . '<br>';
+    }
+
+    public function parallelepipedVolume($side_A, $side_B, $side_C) {
+        $volume = $side_A * $side_B * $side_C;
+        echo 'Объем параллелепипеда с длинной трех его сторон равными ' . "$side_A, $side_B и $side_C см. соответственно" . ' равен: ' . $volume . ' см. куб.' . '<br>';
+    }
+
+    public function circumference($radius) {
+        $length = 2*$this->pi * $radius;
+        echo 'Длинна окружности при ее радиусе равном ' . $radius . ' см. составит: ' . $length . ' см.' . '<br>';
+    }
+
+    public function areaOfCircle($radius) {
+        $square = $this->pi * pow($radius, 2);
+        echo 'Площадь круга при его радиусе равном ' . $radius . ' см. составит: ' . $square . ' см.' . '<br>';
+    }
+
+    public function volumeOfTheBall($radius) {
+        $volume = 4/3 * $this->pi * pow($radius,3);
+        echo 'Объем шара при его радиусе равном ' . $radius . ' см. составит: ' . $volume . ' см.' . '<br>';
+    }
+
+}
+
+$geometricCalculator = new GeometricCalculator();
+$geometricCalculator->areaOfTheSquare(4);
+$geometricCalculator->areaOfTheRectangle(5, 7);
+$geometricCalculator->cubeVolume(5);
+$geometricCalculator->parallelepipedVolume(5, 6, 7);
+$geometricCalculator->circumference(10);
+$geometricCalculator->areaOfCircle(6);
+$geometricCalculator->volumeOfTheBall(7);
+
+echo '<br>';
 
 ?>
