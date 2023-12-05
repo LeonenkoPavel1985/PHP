@@ -318,4 +318,34 @@ $geometricCalculator->volumeOfTheBall(7);
 
 echo '<br>';
 
+// __construct.
+
+// Конструкторы представляют специальные методы, которые выполняются при создании объекта и служат для начальной инициализации его свойств.
+// Для создания конструктора надо объявить функцию с именем __construct
+
+// 8. Напишите оболочку над сессиями. Оболочка должна представлять собой набор функций: сохранение в сессию, считывание из сессии, удаление всех переменных
+// сессии. Сессия должна стартовать в функции __construct (DONE).
+
+class SessionShell
+{
+    public function __construct() {
+        session_start();
+    }
+
+    public function setSession($name, $value)
+    {
+        $_SESSION[$name] = $value;
+    }
+
+    public function getSession($name)
+    {
+        return $_SESSION[$name];
+    }
+
+    public function destroySession($name)
+    {
+        unset($_SESSION[$name]);
+    }
+}
+
 ?>
