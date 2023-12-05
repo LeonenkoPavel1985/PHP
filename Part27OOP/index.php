@@ -348,4 +348,90 @@ class SessionShell
     }
 }
 
+// На наследование и использование других классов.
+
+// Наследование является одним из основных аспектов объектно-ориентированного программирования. Наследование позволяет классу взять функционал уже имеющихся классов и при необходимости 
+// переопределить его. Если у нас есть какой-нибудь класс, в котором не хватает пары функций, то гораздо проще переопределить имеющийся класс, написав пару строк, чем создавать новый с нуля,
+// переписывая кучу кода.
+// Чтобы наследовать один класс от другого, нам надо применить оператор extends. Стоит отметить, что в PHP мы можем унаследовать класс только от одного класса. Множественное наследование не 
+// поддерживается.
+
+// 9. Напишите класс-сумматор. Класс должен иметь следующие методы: сумма двух чисел, сумма квадратов двух чисел, сумма кубов двух чисел и так далее до 5-той степени.
+// Класс должен наследовать методы возведения в степень от класса Power и иметь public методы суммирования (DONE).
+
+class InheritancePower // Родительский класс.
+{
+    public $degreeNum1; // Степень числа 1.
+    public $degreeNum2; // Степень числа 2.
+
+    function secondDegree($number_1, $number_2)
+    {
+        $this->degreeNum1 = $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2;
+        echo "Квадраты чисел $number_1 и $number_2 равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    function cubesNumbers($number_1, $number_2)
+    {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2;
+        echo "Кубы чисел $number_1 и $number_2 равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    function fourthDegreeNumbers($number_1, $number_2)
+    {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2 * $number_2;
+        echo "Числа $number_1 и $number_2 в четвертой степени равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+
+    function fifthDegreeNumbers($number_1, $number_2)
+    {
+        $this->degreeNum1 = $number_1 * $number_1 * $number_1 * $number_1 * $number_1;
+        $this->degreeNum2 = $number_2 * $number_2 * $number_2 * $number_2 * $number_2;
+        echo "Числа $number_1 и $number_2 в пятой степени равны: $this->degreeNum1 и $this->degreeNum2 соответственно.<br>";
+    }
+}
+
+class InheritanceAdder extends InheritancePower // Класс наследник.
+{
+    public $summ; // Сумма.
+
+    public function summ($number_1, $number_2){
+        $this->summ = $number_1 + $number_2;
+        echo "Сумма чисел $number_1 и $number_2 равна: $this->summ.<br>";
+    }
+
+    public function summSquaresNumbers() {
+        $this->secondDegree(2, 2);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма квадратов указанных чисел равна: $this->summ.<br>";
+    }
+
+    public function summCubesNumbers() {
+        $this->cubesNumbers(3, 3);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма кубов указанных чисел равна: $this->summ.<br>";
+    }
+
+    public function summFourthDegreeNumbers() {
+        $this->fourthDegreeNumbers(4, 4);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма чисел в четвертой степени равна: $this->summ.<br>";
+    }
+
+    public function summFifthDegree() {
+        $this->fifthDegreeNumbers(5, 5);
+        $this->summ = $this->degreeNum1 + $this->degreeNum2;
+        echo "Сумма чисел в пятой степени равна: $this->summ.<br>";
+    }
+}
+
+$summNumbers = new InheritanceAdder();
+$summNumbers->summ(2, 2);
+$summNumbers->summSquaresNumbers();
+$summNumbers->summCubesNumbers();
+$summNumbers->summFourthDegreeNumbers();
+$summNumbers->summFifthDegree();
+
 ?>
