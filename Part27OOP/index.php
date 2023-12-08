@@ -433,7 +433,6 @@ $summNumbers->summSquaresNumbers();
 $summNumbers->summCubesNumbers();
 $summNumbers->summFourthDegreeNumbers();
 $summNumbers->summFifthDegree();
-echo '<br>';
 
 // Part 27 OOP (DONE).
 
