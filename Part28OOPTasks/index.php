@@ -135,5 +135,6 @@ $sumSquare->sumCubesElemArr([3, 3, 3, 3]);
 $sumSquare->sumFourthElemArr([4, 4, 4, 4]);
 $sumSquare->sumFifthElemArr([5, 5, 5, 5]);
 
+echo '<br>';
 ?>
 
